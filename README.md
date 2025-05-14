@@ -1,5 +1,15 @@
-# 💫 About Me:
-💻 ¡Hey! Soy un joven apasionado por la tecnología y el desarrollo de software<br>Estudio para ser desarrollador y me encanta todo lo relacionado con el mundo tech.<br><br>🤖 Siempre ando explorando cosas nuevas<br>Desde inteligencia artificial, ciberseguridad, hasta crear mis propios proyectos.<br><br>🚀 Me gusta aprender, crecer y compartir lo que voy descubriendo<br>Aquí en mi GitHub encontrarás parte de mi proceso y todo lo que voy construyendo con esfuerzo.<br><br>✨ Mi meta es seguir mejorando cada día y salir adelante a través del código<br>Esto es solo el comienzo... ¡Gracias por pasarte por aquí!<br><br>
+# 📢 About Me:
+💻 Hey! I'm a young guy passionate about technology and software development
+I'm currently studying to become a developer and I love everything related to the tech world.
+
+🤖 I'm always exploring new things
+From artificial intelligence and cybersecurity to building my own projects.
+
+🚀 I enjoy learning, growing, and sharing what I discover
+Here on my GitHub, you'll find part of my journey and everything I'm building with effort.
+
+✨ My goal is to keep improving every day and move forward through code
+This is just the beginning... Thanks for stopping by!<br><br>
 
 
 ## 🌐 Socials:
@@ -18,10 +28,9 @@
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=SantiTN77&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
----
-[![](https://visitcount.itsvg.in/api?id=SantiTN77&icon=2&color=1)](https://visitcount.itsvg.in)
 
-  ## 💰 You can help me by Donating
+
+  ## 💰 You can buy me a coffee here.
   [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/DTafurN77) 
 
   
