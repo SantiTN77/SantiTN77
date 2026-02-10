@@ -1,16 +1,36 @@
-# 📢 About Me:
-💻 Hey! I'm a young guy passionate about technology and software development
-I'm currently studying to become a developer and I love everything related to the tech world.
+📢 About Me
 
-🤖 I'm always exploring new things
-From artificial intelligence and cybersecurity to building my own projects.
+💻 Independent Full Stack & AI Developer
 
-🚀 I enjoy learning, growing, and sharing what I discover
-Here on my GitHub, you'll find part of my journey and everything I'm building with effort.
+I am a results-driven developer focused on building scalable digital solutions and integrating Advanced Artificial Intelligence into production-ready workflows. I specialize in bridging the gap between complex backend architectures and intuitive user experiences.
 
-✨ My goal is to keep improving every day and move forward through code
-This is just the beginning... Thanks for stopping by!<br><br>
+🤖 AI & Automation Specialist
 
+I don't just use AI; I build ecosystems around it. From RAG (Retrieval-Augmented Generation) pipelines to autonomous agents, I focus on:
+
+Workflow Automation: Orchestrating complex logic with n8n, LangChain, and custom microservices.
+
+Vector Intelligence: Implementation of high-performance search using Qdrant, Pinecone, and OpenAI Embeddings.
+
+LLM Ops: Fine-tuning and prompt engineering for GPT-4, Claude 3.5, and local models via Ollama.
+
+🚀 Tech Stack & Expertise
+
+Frontend: React.js, Next.js, Tailwind CSS (Modern UX/UI focus).
+
+Backend: Node.js, Python (FastAPI/Flask), Docker.
+
+Databases: MongoDB (NoSQL), PostgreSQL (SQL), Qdrant (Vector).
+
+Infrastructure: Linux/Ubuntu Server Management, Cloud Deployment (Vercel, AWS), CI/CD.
+
+✨ My Philosophy
+
+I believe in Code with Purpose. Every project I build—whether it's a Cybersecurity audit tool or an AI-driven document analyzer—is designed to be resilient, secure, and highly efficient.
+
+I am currently operating as an independent developer, helping businesses and founders automate their operations through intelligent software.
+
+Let's build the future of tech, one commit at a time.
 
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/https://www.facebook.com/share/1CG3rtYtG5/) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/Santitafurtn_77) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/daniel-santiago-tafur-numpaque-524b5420b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) 
