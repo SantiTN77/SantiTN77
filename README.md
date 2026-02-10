@@ -1,36 +1,57 @@
-📢 About Me
+<p align="center">⚡ Full Stack & AI Engineer</p>
 
-💻 Independent Full Stack & AI Developer
+<p align="center">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Full--Stack-Developer-blue%3Fstyle%3Dfor-the-badge">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/AI-Architect-red%3Fstyle%3Dfor-the-badge">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/Automation-Expert-green%3Fstyle%3Dfor-the-badge">
+</p>
 
-I am a results-driven developer focused on building scalable digital solutions and integrating Advanced Artificial Intelligence into production-ready workflows. I specialize in bridging the gap between complex backend architectures and intuitive user experiences.
+🚀 Sobre mí
 
-🤖 AI & Automation Specialist
+Especialista en el desarrollo de arquitecturas escalables y Ecosistemas de IA de alto rendimiento. Mi enfoque principal es cerrar la brecha entre la lógica compleja del backend y experiencias de usuario fluidas mediante el uso de agentes autónomos y automatización inteligente.
 
-I don't just use AI; I build ecosystems around it. From RAG (Retrieval-Augmented Generation) pipelines to autonomous agents, I focus on:
+🤖 AI Expertise
 
-Workflow Automation: Orchestrating complex logic with n8n, LangChain, and custom microservices.
+RAG Architect: Especialista en el diseño de tuberías de Generación Aumentada por Recuperación (RAG) para análisis masivo de documentos.
 
-Vector Intelligence: Implementation of high-performance search using Qdrant, Pinecone, and OpenAI Embeddings.
+Workflow Automation: Orquestación de lógica empresarial compleja mediante n8n, LangChain y microservicios personalizados.
 
-LLM Ops: Fine-tuning and prompt engineering for GPT-4, Claude 3.5, and local models via Ollama.
+LLM Ops: Ingeniería de prompts avanzada e integración de modelos de vanguardia como GPT-4o, Claude 3.5 y Llama 3.
 
-🚀 Tech Stack & Expertise
+🛠️ Core Tech Stack
 
-Frontend: React.js, Next.js, Tailwind CSS (Modern UX/UI focus).
+Área
 
-Backend: Node.js, Python (FastAPI/Flask), Docker.
+Tecnologías
 
-Databases: MongoDB (NoSQL), PostgreSQL (SQL), Qdrant (Vector).
+Frontend
 
-Infrastructure: Linux/Ubuntu Server Management, Cloud Deployment (Vercel, AWS), CI/CD.
+Next.js 15 React Tailwind CSS TypeScript
 
-✨ My Philosophy
+Backend
 
-I believe in Code with Purpose. Every project I build—whether it's a Cybersecurity audit tool or an AI-driven document analyzer—is designed to be resilient, secure, and highly efficient.
+Node.js Python (FastAPI) Go Docker
 
-I am currently operating as an independent developer, helping businesses and founders automate their operations through intelligent software.
+AI & Data
 
-Let's build the future of tech, one commit at a time.
+Qdrant MongoDB OpenRouter PostgreSQL
+
+DevOps
+
+Linux (Ubuntu) Vercel AWS CI/CD
+
+✨ Filosofía de Desarrollo
+
+Construyo Código con Propósito. Cada proyecto está diseñado para ser resiliente, seguro y altamente eficiente. Actualmente enfocado en ayudar a empresas a automatizar operaciones críticas mediante software inteligente y self-hosted.
+
+📊 My Stats
+
+<p align="center">
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DTU_USUARIO%26show_icons%3Dtrue%26theme%3Dtransparent%26hide_border%3Dtrue%26title_color%3D3382ed%26icon_color%3D3382ed%26text_color%3Dffffff" alt="Stats" />
+<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3DTU_USUARIO%26layout%3Dcompact%26theme%3Dtransparent%26hide_border%3Dtrue%26title_color%3D3382ed%26text_color%3Dffffff" alt="Top Langs" />
+</p>
+
+📫 Conéctate conmigo
 
 ## 🌐 Socials:
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/https://www.facebook.com/share/1CG3rtYtG5/) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/Santitafurtn_77) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/daniel-santiago-tafur-numpaque-524b5420b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) 
