@@ -1,77 +1,80 @@
-<p align="center">⚡ Full Stack & AI Engineer</p>
+# Daniel Tafur — Portfolio
 
-<p align="center">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Full--Stack-Developer-blue%3Fstyle%3Dfor-the-badge">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/AI-Architect-red%3Fstyle%3Dfor-the-badge">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/Automation-Expert-green%3Fstyle%3Dfor-the-badge">
-</p>
+A minimalist, ultra-modern, dark-mode portfolio for **Daniel Tafur**, Full Stack AI Developer & AI Automation Architect. Inspired by midudev's aesthetic: premium typography, clean borders, subtle gradients and absolute mobile responsiveness.
 
-🚀 Sobre mí
+## Tech Stack
 
-Especialista en el desarrollo de arquitecturas escalables y Ecosistemas de IA de alto rendimiento. Mi enfoque principal es cerrar la brecha entre la lógica compleja del backend y experiencias de usuario fluidas mediante el uso de agentes autónomos y automatización inteligente.
+- **[Next.js 15](https://nextjs.org/)** (App Router)
+- **[Tailwind CSS](https://tailwindcss.com/)**
+- **[Lucide React](https://lucide.dev/)** (icons)
+- **TypeScript**
+- Package manager: **pnpm**
 
-🤖 AI Expertise
+## Sections
 
-RAG Architect: Especialista en el diseño de tuberías de Generación Aumentada por Recuperación (RAG) para análisis masivo de documentos.
+1. **Hero** — name, role, bio and minimalist GitHub / LinkedIn actions.
+2. **Featured Project (Tafvox)** — polished video card ready to embed the YouTube demo.
+3. **Enterprise Experience & Automations** — MetaBiblioteca engineering outcomes.
+4. **Tech Stack, Tools & Paradigms** — clean grid of tools and integrations.
 
-Workflow Automation: Orquestación de lógica empresarial compleja mediante n8n, LangChain y microservicios personalizados.
+## Getting started
 
-LLM Ops: Ingeniería de prompts avanzada e integración de modelos de vanguardia como GPT-4o, Claude 3.5 y Llama 3.
+```bash
+pnpm install
+pnpm dev      # http://localhost:3000
+```
 
-🛠️ Core Tech Stack
+Build for production:
 
-Área
+```bash
+pnpm build
+pnpm start
+```
 
-Tecnologías
+## Configuration
 
-Frontend
+All content lives in **`lib/config.ts`** so you can edit copy without touching components.
 
-Next.js 15 React Tailwind CSS TypeScript
+To wire up the Tafvox demo video, paste the YouTube video ID (the part after `?v=` in the URL) into `tafvox.youtubeId`:
 
-Backend
+```ts
+export const tafvox = {
+  // ...
+  youtubeId: "dQw4w9WgXcQ", // 👈 your video ID
+};
+```
 
-Node.js Python (FastAPI) Go Docker
+When empty, the project renders a polished "coming soon" placeholder card instead.
 
-AI & Data
+## Deploy on Vercel
 
-Qdrant MongoDB OpenRouter PostgreSQL
+This project is Vercel-ready with zero configuration:
 
-DevOps
+1. Push this repository to GitHub.
+2. Import it on [vercel.com/new](https://vercel.com/new).
+3. Vercel auto-detects Next.js — just deploy.
 
-Linux (Ubuntu) Vercel AWS CI/CD
+Or use the Vercel CLI:
 
-✨ Filosofía de Desarrollo
+```bash
+pnpm dlx vercel
+```
 
-Construyo Código con Propósito. Cada proyecto está diseñado para ser resiliente, seguro y altamente eficiente. Actualmente enfocado en ayudar a empresas a automatizar operaciones críticas mediante software inteligente y self-hosted.
+## Project structure
 
-📊 My Stats
-
-<p align="center">
-<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api%3Fusername%3DTU_USUARIO%26show_icons%3Dtrue%26theme%3Dtransparent%26hide_border%3Dtrue%26title_color%3D3382ed%26icon_color%3D3382ed%26text_color%3Dffffff" alt="Stats" />
-<img src="https://www.google.com/search?q=https://github-readme-stats.vercel.app/api/top-langs/%3Fusername%3DTU_USUARIO%26layout%3Dcompact%26theme%3Dtransparent%26hide_border%3Dtrue%26title_color%3D3382ed%26text_color%3Dffffff" alt="Top Langs" />
-</p>
-
-📫 Conéctate conmigo
-
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/https://www.facebook.com/share/1CG3rtYtG5/) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/Santitafurtn_77) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/daniel-santiago-tafur-numpaque-524b5420b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) 
-
-# 💻 Tech Stack:
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-%234D4D4D.svg?style=for-the-badge&logo=windows-terminal&logoColor=white) ![Angular.js](https://img.shields.io/badge/angular.js-%23E23237.svg?style=for-the-badge&logo=angularjs&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=SantiTN77&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=SantiTN77&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=SantiTN77&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=SantiTN77&theme=dracula&no-frame=false&no-bg=true&margin-w=4)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=SantiTN77&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
-
-
-  ## 💰 You can buy me a coffee here.
-  [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/DTafurN77) 
-
-  
+```
+app/
+  layout.tsx        # Root layout, fonts, metadata
+  page.tsx          # Single-page composition
+  globals.css       # Tailwind + base styles
+components/
+  Navbar.tsx
+  Hero.tsx
+  FeaturedProject.tsx
+  Experience.tsx
+  TechStack.tsx
+  Footer.tsx
+  Section.tsx       # Shared section heading + wrapper
+lib/
+  config.ts         # All editable content & placeholders
+```
