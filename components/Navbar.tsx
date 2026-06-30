@@ -5,6 +5,7 @@ import type { Content, Lang } from "@/lib/content";
 export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
   const links = [
     { href: "#work", label: t.work },
+    { href: "#projects", label: t.projects },
     { href: "#experience", label: t.experience },
     { href: "#automations", label: t.automations },
     { href: "#stack", label: t.stack },

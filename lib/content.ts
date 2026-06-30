@@ -68,6 +68,14 @@ const logsStack = [
   "Slack / Telegram",
 ];
 
+const otherProjectsData = [
+  {
+    stack: ["Next.js", "Edge Functions", "FastAPI", "OpenRouter", "TypeScript"],
+    liveUrl: "https://orion-ai-jade.vercel.app",
+    githubUrl: "https://github.com/SantiTN77/orion-ai",
+  },
+];
+
 const techItems = [
   [
     "Python",
@@ -107,6 +115,7 @@ const dict = {
     },
     nav: {
       work: "Work",
+      projects: "Projects",
       experience: "Experience",
       automations: "Automations",
       stack: "Stack",
@@ -132,6 +141,19 @@ const dict = {
         "Computer vision blueprint analysis (Gemini API)",
         "Semantic RAG indexing & retrieval",
         "Real-time version conflict detection",
+      ],
+    },
+    otherProjects: {
+      sectionTitle: "Other Projects",
+      sectionSubtitle: "Smaller builds shipped end to end.",
+      visit: "Live demo",
+      code: "Code",
+      items: [
+        {
+          title: "Orion AI — Voice Agent",
+          description:
+            "A conversational voice agent built on Next.js Edge runtime, talking to LLMs through OpenRouter for low-latency, single-deploy inference without a separate backend service.",
+        },
       ],
     },
     experience: {
@@ -199,6 +221,7 @@ const dict = {
     },
     nav: {
       work: "Proyecto",
+      projects: "Proyectos",
       experience: "Experiencia",
       automations: "Automatizaciones",
       stack: "Stack",
@@ -225,6 +248,19 @@ const dict = {
         "Análisis de planos con visión por computador (Gemini API)",
         "Indexación y recuperación semántica RAG",
         "Detección de conflictos de versión en tiempo real",
+      ],
+    },
+    otherProjects: {
+      sectionTitle: "Otros Proyectos",
+      sectionSubtitle: "Proyectos más pequeños desplegados de punta a punta.",
+      visit: "Demo en vivo",
+      code: "Código",
+      items: [
+        {
+          title: "Orion AI — Agente de Voz",
+          description:
+            "Un agente de voz conversacional construido sobre el runtime Edge de Next.js, que se comunica con LLMs a través de OpenRouter para una inferencia de baja latencia en un único despliegue, sin backend separado.",
+        },
       ],
     },
     experience: {
@@ -306,6 +342,16 @@ export function getContent(lang: Lang) {
       ...d.featured,
       url: tafvoxMedia.url,
       youtubeId: tafvoxMedia.youtubeId,
+    },
+    otherProjects: {
+      sectionTitle: d.otherProjects.sectionTitle,
+      sectionSubtitle: d.otherProjects.sectionSubtitle,
+      visit: d.otherProjects.visit,
+      code: d.otherProjects.code,
+      items: d.otherProjects.items.map((item, i) => ({
+        ...item,
+        ...otherProjectsData[i],
+      })),
     },
     experience: {
       sectionTitle: d.experience.sectionTitle,

@@ -2,6 +2,7 @@ import { getContent, isLang, DEFAULT_LANG, type Lang } from "@/lib/content";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { FeaturedProject } from "@/components/FeaturedProject";
+import { OtherProjects } from "@/components/OtherProjects";
 import { Experience } from "@/components/Experience";
 import { Automations } from "@/components/Automations";
 import { TechStack } from "@/components/TechStack";
@@ -21,6 +22,7 @@ export default async function Home({
       <Navbar lang={safe} t={c.nav} />
       <Hero t={c.hero} />
       <FeaturedProject t={c.featured} />
+      <OtherProjects t={c.otherProjects} />
       <Experience t={c.experience} />
       <Automations t={c.automations} />
       <TechStack t={c.techStack} />
