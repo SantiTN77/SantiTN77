@@ -55,6 +55,14 @@ export function FeaturedProject() {
           {/* Video container card */}
           <div className="relative rounded-2xl border border-white/10 bg-black/40 p-2.5 shadow-2xl shadow-black/50">
             <VideoPlayer />
+            {tafvox.youtubeId ? (
+              <p className="mt-2.5 px-1 font-mono text-[11px] text-zinc-500">
+                * Demo recorded when the project was still branded{" "}
+                <span className="text-zinc-400">&quot;Rufat AI&quot;</span> —
+                same voice architecture &amp; AEC use-case, now shipped as{" "}
+                <span className="text-accent-soft">Tafvox</span>.
+              </p>
+            ) : null}
           </div>
 
           {/* Project meta */}
