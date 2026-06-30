@@ -183,7 +183,7 @@ const dict = {
           title: "Orion AI — Voice Agent",
           badge: null as string | null,
           description:
-            "A conversational voice agent built on the Next.js Edge runtime, talking to LLMs through OpenRouter for low-latency, single-deploy inference without a separate backend service.",
+            "A proof-of-concept AI customer support voice agent for an internet service provider, built on the Next.js Edge runtime. It talks customers through common connectivity issues over voice, with LLM reasoning handled through OpenRouter for low-latency, single-deploy inference without a separate backend service.",
           cta: "Visit live demo",
           pagesLabel: null as string | null,
           pages: [] as { name: string }[],
@@ -307,7 +307,7 @@ const dict = {
           title: "Orion AI — Agente de Voz",
           badge: null as string | null,
           description:
-            "Un agente de voz conversacional construido sobre el runtime Edge de Next.js, que se comunica con LLMs a través de OpenRouter para una inferencia de baja latencia en un único despliegue, sin backend separado.",
+            "Una prueba de concepto de agente de voz de atención al cliente para un proveedor de internet, construida sobre el runtime Edge de Next.js. Guía al usuario por voz para resolver problemas comunes de conectividad, con el razonamiento del LLM a través de OpenRouter para una inferencia de baja latencia en un único despliegue, sin backend separado.",
           cta: "Ver demo en vivo",
           pagesLabel: null as string | null,
           pages: [] as { name: string }[],
