@@ -85,6 +85,14 @@ const ghostWriter = {
   ],
 };
 
+const orionAi = {
+  url: "https://orion-ai-jade.vercel.app",
+  githubUrl: "https://github.com/SantiTN77/orion-ai",
+  stack: ["Next.js", "Edge Functions", "FastAPI", "OpenRouter", "TypeScript"],
+};
+
+const projectsData = [ghostWriter, orionAi];
+
 const techItems = [
   [
     "Python",
@@ -155,11 +163,12 @@ const dict = {
     projects: {
       sectionTitle: "Side Projects",
       sectionSubtitle: "Independent builds, shipped end-to-end outside client work.",
-      badge: "Hackathon build",
       liveBadge: "Live",
+      codeCta: "View code",
       items: [
         {
           title: "Agentic Ghost-Writer — Evolving Code Memory",
+          badge: "Hackathon build",
           description:
             "An MCP (Model Context Protocol) server that gives coding agents long-term memory. It intercepts a live runtime error from an AI agent, embeds it, and runs a hybrid dense + sparse search (RRF-fused) over a Qdrant collection of 50+ past success contexts — auto-correcting the agent's next step before a human ever sees the failure. Orchestrated with n8n, embedded with Gemini, logged to Supabase in real time, and visualized in a live observability dashboard with a one-click error-recovery demo.",
           cta: "Open live dashboard",
@@ -169,6 +178,15 @@ const dict = {
             { name: "Context Inspector" },
             { name: "Interception Flow" },
           ],
+        },
+        {
+          title: "Orion AI — Voice Agent",
+          badge: null as string | null,
+          description:
+            "A proof-of-concept AI customer support voice agent for an internet service provider, built on the Next.js Edge runtime. It talks customers through common connectivity issues over voice, with LLM reasoning handled through OpenRouter for low-latency, single-deploy inference without a separate backend service.",
+          cta: "Visit live demo",
+          pagesLabel: null as string | null,
+          pages: [] as { name: string }[],
         },
       ],
     },
@@ -269,11 +287,12 @@ const dict = {
     projects: {
       sectionTitle: "Proyectos Personales",
       sectionSubtitle: "Builds independientes, llevados de cero a producción fuera del trabajo con clientes.",
-      badge: "Proyecto de hackathon",
       liveBadge: "En vivo",
+      codeCta: "Ver código",
       items: [
         {
           title: "Agentic Ghost-Writer — Memoria Evolutiva de Código",
+          badge: "Proyecto de hackathon",
           description:
             "Un servidor MCP (Model Context Protocol) que le da memoria de largo plazo a agentes de codificación. Intercepta en tiempo real el error que lanza un agente de IA, lo embebe y ejecuta una búsqueda híbrida densa + dispersa (fusionada con RRF) sobre una colección Qdrant con más de 50 contextos de éxito previos — auto-corrigiendo el siguiente paso del agente antes de que un humano vea el error. Orquestado con n8n, embebido con Gemini, registrado en tiempo real en Supabase y visualizado en un dashboard de observabilidad en vivo con una demo de recuperación de errores con un solo clic.",
           cta: "Ver dashboard en vivo",
@@ -283,6 +302,15 @@ const dict = {
             { name: "Inspector de Contexto" },
             { name: "Flujo de Intercepción" },
           ],
+        },
+        {
+          title: "Orion AI — Agente de Voz",
+          badge: null as string | null,
+          description:
+            "Una prueba de concepto de agente de voz de atención al cliente para un proveedor de internet, construida sobre el runtime Edge de Next.js. Guía al usuario por voz para resolver problemas comunes de conectividad, con el razonamiento del LLM a través de OpenRouter para una inferencia de baja latencia en un único despliegue, sin backend separado.",
+          cta: "Ver demo en vivo",
+          pagesLabel: null as string | null,
+          pages: [] as { name: string }[],
         },
       ],
     },
@@ -356,14 +384,19 @@ export function getContent(lang: Lang) {
     projects: {
       sectionTitle: d.projects.sectionTitle,
       sectionSubtitle: d.projects.sectionSubtitle,
-      badge: d.projects.badge,
       liveBadge: d.projects.liveBadge,
-      items: d.projects.items.map((item) => ({
-        ...item,
-        url: ghostWriter.url,
-        stack: ghostWriter.stack,
-        pages: item.pages.map((p, i) => ({ ...p, url: ghostWriter.pageUrls[i] })),
-      })),
+      codeCta: d.projects.codeCta,
+      items: d.projects.items.map((item, i) => {
+        const data = projectsData[i];
+        const pageUrls = "pageUrls" in data ? data.pageUrls : [];
+        return {
+          ...item,
+          url: data.url,
+          stack: data.stack,
+          githubUrl: "githubUrl" in data ? data.githubUrl : null,
+          pages: item.pages.map((p, j) => ({ ...p, url: pageUrls[j] })),
+        };
+      }),
     },
     hero: {
       ...d.hero,
