@@ -4,6 +4,7 @@ import { site } from "@/lib/config";
 const links = [
   { href: "#work", label: "Work" },
   { href: "#experience", label: "Experience" },
+  { href: "#automations", label: "Automations" },
   { href: "#stack", label: "Stack" },
 ];
 

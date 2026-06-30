@@ -33,6 +33,16 @@ Copiloto de voz conversacional para la industria de Arquitectura, Ingeniería y 
 
 > 💼 **MetaBiblioteca** — Full Stack AI &amp; Automation. Workflows de orquestación con n8n y microservicios en Python, y chatbots conversacionales en producción sirviendo plataformas universitarias públicas de alto tráfico.
 
+## 🤖 Automatizaciones IA en producción
+
+Asistentes conversacionales **RAG** (embeddings · chunking · base vectorial · orquestación de LLMs) construidos con **n8n**, desplegados y verificables públicamente — el asistente IA aparece abajo a la derecha en cada sitio:
+
+- 🔗 [coruniamericana.metacatalogo.org](https://coruniamericana.metacatalogo.org/)
+- 🔗 [biblioteca.ecci.edu.co](https://biblioteca.ecci.edu.co/)
+- 🔗 [repositorio.unimagdalena.edu.co](https://repositorio.unimagdalena.edu.co/)
+
+> Desarrollados en mi rol actual en MetaBiblioteca. Por confidencialidad no comparto los flujos n8n internos ni datos corporativos.
+
 ## 🛠️ Tech Stack
 
 **Backend &amp; IA**

@@ -8,7 +8,7 @@ export function TechStack() {
   return (
     <Section id="stack">
       <SectionHeading
-        index="03"
+        index="04"
         title="Tech Stack, Tools & Paradigms"
         subtitle="The toolkit behind autonomous, production-grade AI systems."
       />
