@@ -1,73 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 560" width="1180" height="560" font-family="Inter, system-ui, -apple-system, sans-serif">
   <defs>
-    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.045)"/>
-    </pattern>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 9 5 L 0 9 z" fill="#a78bfa"/>
-    </marker>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
-    </linearGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.045)"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#a78bfa"/></marker>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a78bfa" stop-opacity="0.18"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/></linearGradient>
   </defs>
   <rect width="1180" height="560" rx="18" fill="#0a0a0f"/>
   <rect width="1180" height="560" rx="18" fill="url(#dots)"/>
   <circle cx="1100" cy="60" r="260" fill="url(#glow)"/>
-  <!-- top bar -->
   <g transform="translate(28,26)">
-    <circle cx="6" cy="6" r="6" fill="#ef4444"/>
-    <circle cx="26" cy="6" r="6" fill="#f59e0b"/>
-    <circle cx="46" cy="6" r="6" fill="#22c55e"/>
+    <circle cx="6" cy="6" r="6" fill="#ef4444"/><circle cx="26" cy="6" r="6" fill="#f59e0b"/><circle cx="46" cy="6" r="6" fill="#22c55e"/>
     <text x="74" y="11" font-size="14" font-weight="700" fill="#fafafa">n8n · RAG University Chatbot</text>
   </g>
   <g transform="translate(1030,16)">
     <rect width="122" height="24" rx="12" fill="rgba(167,139,250,0.12)" stroke="rgba(167,139,250,0.35)"/>
-    <text x="61" y="16" font-size="11" font-weight="600" fill="#a78bfa" text-anchor="middle">PRODUCCIÓN</text>
+    <text x="61" y="16" font-size="11" font-weight="600" fill="#a78bfa" text-anchor="middle">PRODUCTION</text>
   </g>
-  <text x="40" y="120" font-size="12" font-weight="700" fill="#a1a1aa" letter-spacing="1">INDEXACIÓN · INGESTA</text><text x="40" y="350" font-size="12" font-weight="700" fill="#a1a1aa" letter-spacing="1">CONSULTA · RAG</text>
+  <text x="40" y="120" font-size="12" font-weight="700" fill="#a1a1aa" letter-spacing="1">INDEXING · INGESTION</text><text x="40" y="350" font-size="12" font-weight="700" fill="#a1a1aa" letter-spacing="1">QUERY · RAG</text>
   <path id="p0" d="M 250 188 C 285 188, 285 188, 320 188" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p0"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p0"/></animateMotion></circle>
   <path id="p1" d="M 530 188 C 565 188, 565 188, 600 188" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p1"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p1"/></animateMotion></circle>
   <path id="p2" d="M 810 188 C 845 188, 845 188, 880 188" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p2"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p2"/></animateMotion></circle>
   <path id="p3" d="M 250 418 C 285 418, 285 418, 320 418" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p3"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p3"/></animateMotion></circle>
   <path id="p4" d="M 530 418 C 565 418, 565 418, 600 418" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p4"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p4"/></animateMotion></circle>
   <path id="p5" d="M 810 418 C 845 418, 845 418, 880 418" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p5"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p5"/></animateMotion></circle>
   <path id="p6" d="M 985 226 C 985 303, 425 303, 425 380" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p6"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p6"/></animateMotion></circle>
   <g transform="translate(40,150)">
     <rect width="210" height="76" rx="14" fill="#17171d" stroke="#33333d" stroke-width="1.5"/>
     <rect x="14" y="18" width="40" height="40" rx="11" fill="#1e3a5f"/>
@@ -121,7 +83,7 @@
     <rect width="210" height="76" rx="14" fill="#17171d" stroke="#33333d" stroke-width="1.5"/>
     <rect x="14" y="18" width="40" height="40" rx="11" fill="#2f5e3a"/>
     <text x="34" y="45" font-size="20" text-anchor="middle">✅</text>
-    <text x="66" y="34" font-size="15" font-weight="600" fill="#fafafa">Respuesta</text>
+    <text x="66" y="34" font-size="15" font-weight="600" fill="#fafafa">Response</text>
     <text x="66" y="53" font-size="11.5" fill="#a1a1aa">Grounded answer</text>
   </g>
 </svg>

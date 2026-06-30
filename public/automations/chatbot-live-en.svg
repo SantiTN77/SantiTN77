@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 640" width="1180" height="640" font-family="Inter, system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b35d6"/><stop offset="100%" stop-color="#2a2697"/></linearGradient>
+    <linearGradient id="botglow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#7c5cf0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="24" flood-color="#000" flood-opacity="0.45"/></filter>
+  </defs>
+  <rect width="1180" height="640" rx="18" fill="#0a0a0f"/>
+  <circle cx="980" cy="80" r="280" fill="#a78bfa" opacity="0.10"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="34" width="1100" height="572" rx="16" fill="#ffffff"/>
+    <rect x="40" y="34" width="1100" height="46" rx="16" fill="#f1f1f4"/>
+    <rect x="40" y="64" width="1100" height="16" fill="#f1f1f4"/>
+    <circle cx="68" cy="57" r="6" fill="#ef4444"/><circle cx="88" cy="57" r="6" fill="#f59e0b"/><circle cx="108" cy="57" r="6" fill="#22c55e"/>
+    <rect x="150" y="45" width="700" height="24" rx="12" fill="#ffffff" stroke="#e2e2e8"/>
+    <text x="168" y="61" font-size="12.5" fill="#52525b">🔒  library · bibliographic catalog — AI assistant in production</text>
+  </g>
+  <rect x="40" y="80" width="1100" height="58" fill="#2a2697"/>
+  <circle cx="78" cy="109" r="15" fill="#f5c542"/><text x="78" y="114" font-size="15" text-anchor="middle">🎓</text>
+  <text x="104" y="105" font-size="15" font-weight="800" fill="#ffffff">UNIVERSITY LIBRARY</text>
+  <text x="104" y="123" font-size="11" fill="#c7c5f0">Bibliographic catalog · Repository</text>
+  <text x="900" y="113" font-size="12" fill="#c7c5f0">Home   Info   Repository</text>
+  <rect x="40" y="138" width="1100" height="150" fill="url(#hero)"/>
+  <text x="90" y="196" font-size="22" font-weight="800" fill="#ffffff">Find books, theses and papers</text>
+  <rect x="90" y="216" width="640" height="44" rx="10" fill="#ffffff"/>
+  <text x="112" y="243" font-size="14" fill="#9ca3af">Search the catalog…</text>
+  <rect x="744" y="216" width="56" height="44" rx="10" fill="#f5c542"/><text x="772" y="245" font-size="18" text-anchor="middle">🔍</text>
+  <g>
+    <rect x="90" y="318" width="300" height="150" rx="12" fill="#f7f7fa" stroke="#e6e6ec"/>
+    <rect x="110" y="338" width="50" height="68" rx="6" fill="#cdd2f5"/>
+    <rect x="176" y="342" width="180" height="12" rx="6" fill="#2a2697"/><rect x="176" y="362" width="150" height="9" rx="4" fill="#c2c2cc"/><rect x="176" y="378" width="120" height="9" rx="4" fill="#c2c2cc"/>
+    <rect x="110" y="426" width="120" height="22" rx="11" fill="#e7e3fb"/><text x="170" y="441" font-size="10" fill="#5b4bd1" text-anchor="middle">Available</text>
+    <rect x="410" y="318" width="300" height="150" rx="12" fill="#f7f7fa" stroke="#e6e6ec"/>
+    <rect x="430" y="338" width="50" height="68" rx="6" fill="#f5d9c2"/>
+    <rect x="496" y="342" width="180" height="12" rx="6" fill="#2a2697"/><rect x="496" y="362" width="150" height="9" rx="4" fill="#c2c2cc"/><rect x="496" y="378" width="120" height="9" rx="4" fill="#c2c2cc"/>
+    <rect x="430" y="426" width="120" height="22" rx="11" fill="#e7e3fb"/><text x="490" y="441" font-size="10" fill="#5b4bd1" text-anchor="middle">Available</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="760" y="300" width="356" height="290" rx="16" fill="#13131a" stroke="#2a2a33"/>
+    <rect x="760" y="300" width="356" height="58" rx="16" fill="#1b1b23"/><rect x="760" y="338" width="356" height="20" fill="#1b1b23"/>
+    <circle cx="792" cy="329" r="17" fill="url(#botglow)"/><text x="792" y="335" font-size="17" text-anchor="middle">🤖</text>
+    <text x="820" y="324" font-size="13.5" font-weight="700" fill="#fafafa">AI Assistant · Librarian</text>
+    <circle cx="822" cy="340" r="4" fill="#22c55e"/><text x="832" y="344" font-size="11" fill="#a1a1aa">Online 24/7 · RAG</text>
+    <rect x="900" y="378" width="196" height="40" rx="12" fill="#4c3fd1"/>
+    <text x="918" y="396" font-size="11.5" fill="#ffffff">Do you have material on</text><text x="918" y="411" font-size="11.5" fill="#ffffff">applied machine learning?</text>
+    <rect x="780" y="430" width="250" height="86" rx="12" fill="#22222b"/>
+    <text x="796" y="450" font-size="11.5" fill="#e4e4e7">Yes. Found 14 titles. Top:</text>
+    <text x="796" y="468" font-size="11.5" fill="#c4b5fd">• “Machine Learning” (2023)</text>
+    <text x="796" y="485" font-size="11.5" fill="#c4b5fd">• “Deep Learning with Python”</text>
+    <text x="796" y="504" font-size="10" fill="#71717a">Sources: catalog · RAG embeddings</text>
+    <rect x="780" y="532" width="316" height="38" rx="19" fill="#1f1f27" stroke="#33333d"/>
+    <text x="800" y="556" font-size="11.5" fill="#71717a">Type your question…</text>
+    <circle cx="1077" cy="551" r="15" fill="url(#botglow)"/><text x="1077" y="556" font-size="14" text-anchor="middle">➤</text>
+  </g>
+</svg>

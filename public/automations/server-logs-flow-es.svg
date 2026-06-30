@@ -1,24 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 470" width="1180" height="470" font-family="Inter, system-ui, -apple-system, sans-serif">
   <defs>
-    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.045)"/>
-    </pattern>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1 L 9 5 L 0 9 z" fill="#a78bfa"/>
-    </marker>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.18"/>
-      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
-    </linearGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.045)"/></pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 9 5 L 0 9 z" fill="#a78bfa"/></marker>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a78bfa" stop-opacity="0.18"/><stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/></linearGradient>
   </defs>
   <rect width="1180" height="470" rx="18" fill="#0a0a0f"/>
   <rect width="1180" height="470" rx="18" fill="url(#dots)"/>
   <circle cx="1100" cy="60" r="260" fill="url(#glow)"/>
-  <!-- top bar -->
   <g transform="translate(28,26)">
-    <circle cx="6" cy="6" r="6" fill="#ef4444"/>
-    <circle cx="26" cy="6" r="6" fill="#f59e0b"/>
-    <circle cx="46" cy="6" r="6" fill="#22c55e"/>
+    <circle cx="6" cy="6" r="6" fill="#ef4444"/><circle cx="26" cy="6" r="6" fill="#f59e0b"/><circle cx="46" cy="6" r="6" fill="#22c55e"/>
     <text x="74" y="11" font-size="14" font-weight="700" fill="#fafafa">n8n · Server Logs &amp; Stats</text>
   </g>
   <g transform="translate(1030,16)">
@@ -27,35 +17,15 @@
   </g>
   <text x="40" y="150" font-size="12" font-weight="700" fill="#a1a1aa" letter-spacing="1">MONITOREO DE SERVIDORES · REPORTES AUTOMÁTICOS</text>
   <path id="p1000" d="M 250 238 C 259 238, 259 238, 268 238" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p1000"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p1000"/></animateMotion></circle>
   <path id="p1001" d="M 478 238 C 487 238, 487 238, 496 238" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p1001"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p1001"/></animateMotion></circle>
   <path id="p1002" d="M 706 238 C 715 238, 715 238, 724 238" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p1002"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p1002"/></animateMotion></circle>
   <path id="p1003" d="M 934 238 C 934 193, 952 193, 952 148" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p1003"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p1003"/></animateMotion></circle>
   <path id="p1004" d="M 934 238 C 934 283, 952 283, 952 328" fill="none" stroke="#a78bfa" stroke-width="2.5" opacity="0.55" marker-end="url(#arrow)"/>
-  <circle r="3.5" fill="#c4b5fd">
-    <animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#p1004"/>
-    </animateMotion>
-  </circle>
+  <circle r="3.5" fill="#c4b5fd"><animateMotion dur="2.6s" repeatCount="indefinite" rotate="auto"><mpath href="#p1004"/></animateMotion></circle>
   <g transform="translate(40,200)">
     <rect width="210" height="76" rx="14" fill="#17171d" stroke="#33333d" stroke-width="1.5"/>
     <rect x="14" y="18" width="40" height="40" rx="11" fill="#3b2f5e"/>
