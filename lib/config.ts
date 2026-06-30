@@ -22,9 +22,9 @@ export const tafvox = {
   url: "https://tafvox.com",
   description:
     "An advanced AI-driven conversational voice copilot designed for the Architecture, Engineering, and Construction (AEC) industry. It automates and manages onsite blueprint documentation, executes semantic RAG indexing, analyzes complex blueprints via computer vision (Gemini API), and flags version conflicts or errors in real-time through low-latency voice interactions.",
-  // 👉 Paste the YouTube video ID here (e.g. "dQw4w9WgXcQ").
-  // Leave empty to show a polished placeholder card.
-  youtubeId: "",
+  // Demo video — recorded when the project was still branded "Rufat AI".
+  // The technology, voice architecture and AEC use-case are identical to Tafvox.
+  youtubeId: "BpHpvWGqkKs",
   highlights: [
     "Low-latency conversational voice interface",
     "Computer vision blueprint analysis (Gemini API)",

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, ArrowUpRight, Sparkles } from "lucide-react";
 import { site } from "@/lib/config";
@@ -19,6 +20,17 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center">
+        {/* Profile photo */}
+        <div className="opacity-0-start animate-fade-up relative mb-5 h-24 w-24 overflow-hidden rounded-full border-2 border-white/15 ring-4 ring-accent/20 sm:h-28 sm:w-28">
+          <Image
+            src="/profile.jpg"
+            alt="Daniel Tafur"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
         <div className="opacity-0-start animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-zinc-300">
           <Sparkles className="h-3.5 w-3.5 text-accent-soft" />
           Available for AI automation projects
