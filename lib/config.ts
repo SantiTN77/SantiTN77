@@ -12,8 +12,7 @@ export const site = {
   bio: "I build autonomous agents, RAG systems and AI-augmented workflows that eliminate manual enterprise processes through advanced LLM orchestration. My focus is turning slow, error-prone operations into reliable, self-running software.",
   socials: {
     github: "https://github.com/SantiTN77",
-    linkedin:
-      "https://www.linkedin.com/in/daniel-santiago-tafur-numpaque",
+    linkedin: "https://www.linkedin.com/in/danielsantiagotafur/",
   },
 } as const;
 

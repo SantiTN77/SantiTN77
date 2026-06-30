@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://tafvox.com"><img src="https://img.shields.io/badge/🎙️_Tafvox-Live-A78BFA?style=for-the-badge" alt="Tafvox" /></a>
-  <a href="https://www.linkedin.com/in/daniel-santiago-tafur-numpaque"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/danielsantiagotafur/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
 ---
@@ -74,7 +74,7 @@ Copiloto de voz conversacional para la industria de Arquitectura, Ingeniería y 
 ## 🌐 Conéctate conmigo
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/daniel-santiago-tafur-numpaque"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/danielsantiagotafur/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://github.com/SantiTN77"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://www.instagram.com/Santitafurtn_77"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   <a href="https://www.facebook.com/share/1CG3rtYtG5/"><img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" /></a>
