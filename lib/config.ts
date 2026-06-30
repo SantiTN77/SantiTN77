@@ -42,6 +42,62 @@ export const experience = [
   },
 ] as const;
 
+export const automations = {
+  // Disclaimer shown at the top of the section.
+  note: "Proyectos desarrollados en mi rol actual en MetaBiblioteca. Por políticas internas de confidencialidad no comparto los flujos n8n completos ni datos corporativos: los diagramas son representaciones de referencia de la arquitectura real. Los despliegues, en cambio, son públicos y verificables — el asistente IA aparece abajo a la derecha en cada sitio.",
+  // Public, verifiable deployments (the chatbot widget is live on each).
+  deployments: [
+    {
+      name: "Coruniamericana",
+      url: "https://coruniamericana.metacatalogo.org/",
+      label: "Catálogo + Asistente IA",
+    },
+    {
+      name: "Biblioteca ECCI",
+      url: "https://biblioteca.ecci.edu.co/",
+      label: "Asistente bibliográfico",
+    },
+    {
+      name: "Repositorio Unimagdalena",
+      url: "https://repositorio.unimagdalena.edu.co/",
+      label: "Repositorio + RAG",
+    },
+  ],
+  projects: [
+    {
+      title: "Chatbot RAG Universitario — Bibliotecólogo IA 24/7",
+      flow: "/automations/rag-chatbot-flow.svg",
+      mockup: "/automations/chatbot-live.svg",
+      description:
+        "Asistente conversacional desplegado sobre catálogos y repositorios universitarios. La arquitectura, orquestada en n8n, ingesta documentos, los divide en chunks con solapamiento, genera embeddings y los indexa en una base vectorial (Qdrant). En cada consulta ejecuta recuperación semántica (RAG) y orquesta el LLM para entregar respuestas fundamentadas y citadas, atendiendo a miles de estudiantes 24/7.",
+      stack: [
+        "n8n",
+        "Embeddings",
+        "Chunking",
+        "RAG",
+        "Qdrant",
+        "LLM · GPT-4o / Gemini",
+      ],
+      live: true,
+    },
+    {
+      title: "Monitoreo de Servidores — Logs, Estadísticas & Reportes",
+      flow: "/automations/server-logs-flow.svg",
+      description:
+        "Workflow de n8n que ejecuta comandos remotos por SSH de forma programada sobre los servidores, recolecta y parsea logs y métricas (CPU, RAM, uptime, errores), los indexa y almacena para histórico, y genera reportes automáticos que despacha por Gmail (PDF/CSV adjunto) junto con notificaciones a Slack/Telegram. Convierte el monitoreo manual en un proceso autónomo y auditable.",
+      stack: [
+        "n8n",
+        "SSH remoto",
+        "Cron",
+        "Indexación",
+        "Gmail API",
+        "Slack / Telegram",
+      ],
+      live: false,
+    },
+  ],
+} as const;
+
 export const techStack = [
   {
     category: "Backend & AI",
