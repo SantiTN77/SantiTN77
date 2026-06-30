@@ -68,6 +68,23 @@ const logsStack = [
   "Slack / Telegram",
 ];
 
+const ghostWriter = {
+  url: "https://agent-ghost-writer.vercel.app/dashboard",
+  stack: [
+    "Model Context Protocol (MCP)",
+    "Qdrant Hybrid Search (RRF)",
+    "Gemini Embeddings",
+    "n8n",
+    "Next.js",
+    "Supabase",
+  ],
+  pageUrls: [
+    "https://agent-ghost-writer.vercel.app/dashboard",
+    "https://agent-ghost-writer.vercel.app/inspector",
+    "https://agent-ghost-writer.vercel.app/flow",
+  ],
+};
+
 const techItems = [
   [
     "Python",
@@ -107,6 +124,7 @@ const dict = {
     },
     nav: {
       work: "Work",
+      projects: "Projects",
       experience: "Experience",
       automations: "Automations",
       stack: "Stack",
@@ -132,6 +150,26 @@ const dict = {
         "Computer vision blueprint analysis (Gemini API)",
         "Semantic RAG indexing & retrieval",
         "Real-time version conflict detection",
+      ],
+    },
+    projects: {
+      sectionTitle: "Side Projects",
+      sectionSubtitle: "Independent builds, shipped end-to-end outside client work.",
+      badge: "Hackathon build",
+      liveBadge: "Live",
+      items: [
+        {
+          title: "Agentic Ghost-Writer — Evolving Code Memory",
+          description:
+            "An MCP (Model Context Protocol) server that gives coding agents long-term memory. It intercepts a live runtime error from an AI agent, embeds it, and runs a hybrid dense + sparse search (RRF-fused) over a Qdrant collection of 50+ past success contexts — auto-correcting the agent's next step before a human ever sees the failure. Orchestrated with n8n, embedded with Gemini, logged to Supabase in real time, and visualized in a live observability dashboard with a one-click error-recovery demo.",
+          cta: "Open live dashboard",
+          pagesLabel: "Explore the system",
+          pages: [
+            { name: "Health Dashboard" },
+            { name: "Context Inspector" },
+            { name: "Interception Flow" },
+          ],
+        },
       ],
     },
     experience: {
@@ -199,6 +237,7 @@ const dict = {
     },
     nav: {
       work: "Proyecto",
+      projects: "Proyectos",
       experience: "Experiencia",
       automations: "Automatizaciones",
       stack: "Stack",
@@ -225,6 +264,26 @@ const dict = {
         "Análisis de planos con visión por computador (Gemini API)",
         "Indexación y recuperación semántica RAG",
         "Detección de conflictos de versión en tiempo real",
+      ],
+    },
+    projects: {
+      sectionTitle: "Proyectos Personales",
+      sectionSubtitle: "Builds independientes, llevados de cero a producción fuera del trabajo con clientes.",
+      badge: "Proyecto de hackathon",
+      liveBadge: "En vivo",
+      items: [
+        {
+          title: "Agentic Ghost-Writer — Memoria Evolutiva de Código",
+          description:
+            "Un servidor MCP (Model Context Protocol) que le da memoria de largo plazo a agentes de codificación. Intercepta en tiempo real el error que lanza un agente de IA, lo embebe y ejecuta una búsqueda híbrida densa + dispersa (fusionada con RRF) sobre una colección Qdrant con más de 50 contextos de éxito previos — auto-corrigiendo el siguiente paso del agente antes de que un humano vea el error. Orquestado con n8n, embebido con Gemini, registrado en tiempo real en Supabase y visualizado en un dashboard de observabilidad en vivo con una demo de recuperación de errores con un solo clic.",
+          cta: "Ver dashboard en vivo",
+          pagesLabel: "Explorar el sistema",
+          pages: [
+            { name: "Dashboard de Salud" },
+            { name: "Inspector de Contexto" },
+            { name: "Flujo de Intercepción" },
+          ],
+        },
       ],
     },
     experience: {
@@ -294,6 +353,18 @@ export function getContent(lang: Lang) {
     lang,
     meta: d.meta,
     nav: { ...d.nav, githubUrl: socials.github },
+    projects: {
+      sectionTitle: d.projects.sectionTitle,
+      sectionSubtitle: d.projects.sectionSubtitle,
+      badge: d.projects.badge,
+      liveBadge: d.projects.liveBadge,
+      items: d.projects.items.map((item) => ({
+        ...item,
+        url: ghostWriter.url,
+        stack: ghostWriter.stack,
+        pages: item.pages.map((p, i) => ({ ...p, url: ghostWriter.pageUrls[i] })),
+      })),
+    },
     hero: {
       ...d.hero,
       name: "Daniel Tafur",

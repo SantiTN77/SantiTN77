@@ -7,7 +7,7 @@ export function Experience({ t }: { t: Content["experience"] }) {
   return (
     <Section id="experience">
       <SectionHeading
-        index="02"
+        index="03"
         title={t.sectionTitle}
         subtitle={t.sectionSubtitle}
       />

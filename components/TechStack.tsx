@@ -9,7 +9,7 @@ export function TechStack({ t }: { t: Content["techStack"] }) {
   return (
     <Section id="stack">
       <SectionHeading
-        index="04"
+        index="05"
         title={t.sectionTitle}
         subtitle={t.sectionSubtitle}
       />
