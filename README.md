@@ -1,11 +1,12 @@
 <h1 align="center">Hola, soy Daniel Tafur 👋</h1>
 
 <p align="center">
-  <b>Full Stack AI Developer &amp; AI Automation Architect</b><br/>
+  <b>AI Engineer · Full Stack &amp; AI Automation Architect</b><br/>
   Construyo agentes autónomos, sistemas RAG y flujos aumentados con IA que eliminan procesos manuales en la empresa.
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/AI-Engineer-8B5CF6?style=for-the-badge" alt="AI Engineer" />
   <img src="https://img.shields.io/badge/Full--Stack-Developer-3B82F6?style=for-the-badge" alt="Full Stack Developer" />
   <img src="https://img.shields.io/badge/AI-Architect-EF4444?style=for-the-badge" alt="AI Architect" />
   <img src="https://img.shields.io/badge/Automation-Expert-22C55E?style=for-the-badge" alt="Automation Expert" />

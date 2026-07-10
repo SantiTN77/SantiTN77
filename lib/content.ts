@@ -22,7 +22,7 @@ const socials = {
 
 const tafvoxMedia = {
   url: "https://tafvox.com",
-  youtubeId: "BpHpvWGqkKs",
+  youtubeId: "ky2DTp0CErY",
 };
 
 const flows = (lang: Lang) => ({
@@ -126,7 +126,7 @@ const techItems = [
 const dict = {
   en: {
     meta: {
-      title: "Daniel Tafur — Full Stack AI Developer & Automation Architect",
+      title: "Daniel Tafur — AI Engineer & Automation Architect",
       description:
         "I design and ship autonomous agents, RAG systems and AI-augmented workflows that eliminate manual enterprise processes through advanced LLM orchestration.",
     },
@@ -139,7 +139,7 @@ const dict = {
     },
     hero: {
       badge: "Available for AI automation projects",
-      role: "Full Stack AI Developer & AI Automation Architect",
+      role: "AI Engineer · Full Stack & AI Automation Architect",
       bio: "I build autonomous agents, RAG systems and AI-augmented workflows that eliminate manual enterprise processes through advanced LLM orchestration. My focus is turning slow, error-prone operations into reliable, self-running software.",
     },
     featured: {
@@ -151,8 +151,6 @@ const dict = {
         "An advanced AI-driven conversational voice copilot designed for the Architecture, Engineering, and Construction (AEC) industry. It automates and manages onsite blueprint documentation, executes semantic RAG indexing, analyzes complex blueprints via computer vision (Gemini API), and flags version conflicts or errors in real-time through low-latency voice interactions.",
       visit: "Visit live site",
       comingSoon: "Demo video — coming soon",
-      videoNote:
-        'Demo recorded when the project was still branded "Rufat AI" — same voice architecture & AEC use-case, now shipped as Tafvox.',
       highlights: [
         "Low-latency conversational voice interface",
         "Computer vision blueprint analysis (Gemini API)",
@@ -249,7 +247,7 @@ const dict = {
   },
   es: {
     meta: {
-      title: "Daniel Tafur — Desarrollador Full Stack de IA & Arquitecto de Automatización",
+      title: "Daniel Tafur — AI Engineer & Arquitecto de Automatización",
       description:
         "Diseño y despliego agentes autónomos, sistemas RAG y flujos aumentados con IA que eliminan procesos manuales en la empresa mediante orquestación avanzada de LLMs.",
     },
@@ -262,7 +260,7 @@ const dict = {
     },
     hero: {
       badge: "Disponible para proyectos de automatización con IA",
-      role: "Desarrollador Full Stack de IA & Arquitecto de Automatización IA",
+      role: "AI Engineer · Full Stack & Arquitecto de Automatización IA",
       bio: "Construyo agentes autónomos, sistemas RAG y flujos aumentados con IA que eliminan procesos manuales en la empresa mediante orquestación avanzada de LLMs. Mi enfoque es convertir operaciones lentas y propensas a errores en software confiable que se ejecuta solo.",
     },
     featured: {
@@ -275,8 +273,6 @@ const dict = {
         "Un copiloto de voz conversacional avanzado impulsado por IA para la industria de Arquitectura, Ingeniería y Construcción (AEC). Automatiza y gestiona la documentación de planos en obra, ejecuta indexación semántica RAG, analiza planos complejos mediante visión por computador (Gemini API) y detecta conflictos de versión o errores en tiempo real mediante interacciones de voz de baja latencia.",
       visit: "Ver sitio en vivo",
       comingSoon: "Video demo — próximamente",
-      videoNote:
-        'Demo grabada cuando el proyecto se llamaba «Rufat AI» — misma arquitectura de voz y caso de uso AEC, ahora como Tafvox.',
       highlights: [
         "Interfaz de voz conversacional de baja latencia",
         "Análisis de planos con visión por computador (Gemini API)",
