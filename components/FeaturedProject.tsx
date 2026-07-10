@@ -47,11 +47,6 @@ export function FeaturedProject({ t }: { t: Content["featured"] }) {
             {/* Video container card */}
             <div className="relative rounded-2xl border border-white/10 bg-black/40 p-2.5 shadow-2xl shadow-black/50">
               <VideoPlayer t={t} />
-              {t.youtubeId ? (
-                <p className="mt-2.5 px-1 font-mono text-[11px] text-zinc-500">
-                  * {t.videoNote}
-                </p>
-              ) : null}
             </div>
 
             {/* Project meta */}
