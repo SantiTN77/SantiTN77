@@ -1,7 +1,7 @@
 <h1 align="center">Daniel Tafur</h1>
 
 <p align="center">
-<b>AI Agent Engineer · AI Solutions Architect (GCP)</b><br/>
+<b>Ingeniero de Agentes de IA · Arquitecto de Soluciones de IA (GCP)</b><br/>
 Diseño y despliego sistemas multiagente, RAG y voz en tiempo real sobre Google Cloud: de la arquitectura a producción.
 </p>
 
