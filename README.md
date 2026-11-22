@@ -1,7 +1,7 @@
 <h1 align="center">Daniel Tafur</h1>
 
 <p align="center">
-<b>Ingeniero de Agentes de IA · Arquitecto de Soluciones de IA (GCP)</b><br/>
+<b>AI Agent Engineer · AI Solutions Architect (GCP)</b><br/>
 Diseño y despliego sistemas multiagente, RAG y voz en tiempo real sobre Google Cloud: de la arquitectura a producción.
 </p>
 
@@ -14,7 +14,7 @@ Diseño y despliego sistemas multiagente, RAG y voz en tiempo real sobre Google 
 
 ## Sobre mí
 
-Ingeniero de agentes de IA enfocado en llevar sistemas agénticos a producción: orquestación multiagente, recuperación semántica (RAG) sobre bases vectoriales, interacción de voz de baja latencia y despliegue serverless en Google Cloud. Priorizo confiabilidad, trazabilidad y costos controlados, no solo demos.
+AI Agent Engineer enfocado en llevar sistemas agénticos a producción: orquestación multiagente, RAG sobre bases vectoriales, voz de baja latencia y despliegue serverless en Google Cloud. Priorizo confiabilidad, trazabilidad y costos controlados, no solo demos.
 
 - **Arquitectura multiagente**: agentes especializados con Google ADK, herramientas (MCP) y flujos con supervisión humana.
 - **RAG de nivel producción**: embeddings en Vertex AI, búsqueda vectorial en Qdrant, aislamiento por organización y validación de respuestas.
