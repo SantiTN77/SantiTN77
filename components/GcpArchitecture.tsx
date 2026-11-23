@@ -1,86 +1,101 @@
-import Link from "next/link";
-import { ArrowUpRight, Github, PlayCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Section, SectionHeading } from "./Section";
-import { Reveal } from "./Reveal";
+import { FadeIn, Rule } from "./motion";
+import { VideoStage } from "./VideoStage";
 import type { Content } from "@/lib/content";
 
 export function GcpArchitecture({ t }: { t: Content["gcp"] }) {
   return (
     <Section id="gcp">
-      <SectionHeading index="01" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
+      <SectionHeading index="01" label="Google Cloud" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-28 md:gap-40">
         {t.items.map((item, i) => (
-          <Reveal key={item.repo} variant="up" delay={i * 90}>
-            <article className="overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/30 transition-all duration-300 hover:border-white/20">
-              <div className="grid grid-cols-1 lg:grid-cols-5">
-                <div className="relative bg-black lg:col-span-3">
-                  <video
-                    className="aspect-video h-full w-full object-cover"
-                    controls
-                    preload="none"
-                    playsInline
-                    poster={item.poster}
-                    aria-label={`${t.watch}: ${item.title}`}
-                  >
-                    <source src={item.video} type="video/mp4" />
-                  </video>
-                </div>
-
-                <div className="flex flex-col p-5 sm:p-7 lg:col-span-2">
-                  <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1 font-mono text-[11px] font-medium text-sky-300">
-                    <PlayCircle className="h-3 w-3" />
-                    {t.watch}
-                  </span>
-                  <h3 className="mt-4 text-balance text-lg font-semibold tracking-tight text-white sm:text-xl">
+          <article key={item.repo} className="grid grid-cols-12 gap-x-6 gap-y-8">
+            {/* title block */}
+            <div className="col-span-12 grid grid-cols-12 items-end gap-x-6 gap-y-4">
+              <FadeIn className="col-span-12 md:col-span-3">
+                <span className="block font-serif text-[88px] leading-[0.8] text-ink/90 md:text-[120px]">
+                  0{i + 1}
+                </span>
+              </FadeIn>
+              <div className="col-span-12 md:col-span-9">
+                <FadeIn>
+                  <h3 className="text-balance text-3xl font-medium leading-[1.05] tracking-tight md:text-5xl">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-400">{item.tagline}</p>
-
-                  <ul className="mt-4 space-y-2">
-                    {item.highlights.map((h) => (
-                      <li key={h} className="flex gap-2 text-sm text-zinc-300">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" />
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mt-auto flex flex-wrap gap-3 pt-6">
-                    <Link
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/link inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/10"
-                    >
-                      {t.live}
-                      <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                    </Link>
-                    <Link
-                      href={item.repo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-zinc-300 transition-all duration-300 hover:border-white/25 hover:text-white"
-                    >
-                      <Github className="h-4 w-4" />
-                      {t.code}
-                    </Link>
-                  </div>
-                </div>
+                </FadeIn>
+                <FadeIn delay={0.08}>
+                  <p className="mt-4 max-w-2xl text-pretty text-base leading-relaxed text-ink-muted md:text-lg">
+                    {item.tagline}
+                  </p>
+                </FadeIn>
               </div>
+            </div>
 
-              <div className="flex flex-wrap gap-2 border-t border-white/10 px-5 py-4 sm:px-7">
-                {item.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-zinc-300"
-                  >
-                    {tech}
-                  </span>
+            {/* stage */}
+            <div className="col-span-12">
+              <VideoStage src={item.video} poster={item.poster} title={item.title} playLabel={t.play} />
+            </div>
+
+            {/* details */}
+            <div className="col-span-12 md:col-span-3">
+              <FadeIn className="flex flex-col gap-2">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between border-b border-ink py-3 text-sm font-medium"
+                >
+                  {t.live}
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
+                </a>
+                <a
+                  href={item.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between border-b border-line-strong py-3 text-sm text-ink-soft"
+                >
+                  {t.code}
+                  <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
+                </a>
+              </FadeIn>
+            </div>
+
+            <div className="col-span-12 md:col-span-6">
+              <FadeIn>
+                <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
+                  {t.highlightsLabel}
+                </p>
+              </FadeIn>
+              <ol className="flex flex-col">
+                {item.highlights.map((h, j) => (
+                  <FadeIn as="li" key={h} delay={j * 0.07} className="flex gap-4 border-t border-line py-3.5 text-[15px] leading-snug text-ink-soft">
+                    <span className="font-mono text-xs text-accent">{String(j + 1).padStart(2, "0")}</span>
+                    {h}
+                  </FadeIn>
                 ))}
-              </div>
-            </article>
-          </Reveal>
+              </ol>
+            </div>
+
+            <div className="col-span-12 md:col-span-3">
+              <FadeIn>
+                <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">{t.stackLabel}</p>
+                <ul className="flex flex-wrap gap-1.5">
+                  {item.stack.map((s) => (
+                    <li
+                      key={s}
+                      className="rounded-full border border-line-strong px-2.5 py-1 font-mono text-[11px] text-ink-soft transition-colors duration-300 hover:border-ink hover:bg-ink hover:text-paper"
+                    >
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+            </div>
+
+            {i < t.items.length - 1 ? <Rule className="col-span-12 mt-10 md:hidden" /> : null}
+          </article>
         ))}
       </div>
     </Section>

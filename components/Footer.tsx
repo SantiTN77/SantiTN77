@@ -1,58 +1,48 @@
-import Link from "next/link";
-import { Github, Linkedin, ArrowUpRight } from "lucide-react";
-import { Reveal } from "./Reveal";
+import { ArrowUpRight } from "lucide-react";
+import { FadeIn, Magnetic, SplitText } from "./motion";
 import type { Content } from "@/lib/content";
 
 export function Footer({ t }: { t: Content["footer"] }) {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 px-6 py-16">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 bottom-0 h-64 w-[480px] -translate-x-1/2 translate-y-1/2 rounded-full bg-accent/10 blur-[120px]"
-      />
-      <Reveal variant="up" className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
-        <div>
-          <p className="text-balance text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            {t.headline}
-          </p>
-          <p className="mt-3 text-sm text-zinc-400">{t.sub}</p>
-        </div>
+    <footer id="contact" className="relative overflow-hidden bg-ink text-paper">
+      <div className="mx-auto max-w-[1240px] px-5 pb-10 pt-24 sm:px-8 md:pt-36">
+        <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-paper/50">{t.sub}</p>
 
-        <div className="flex items-center gap-3">
-          <Link
+        <h2 className="mt-6 text-[12vw] leading-[0.95] tracking-tightest md:text-[110px]">
+          <SplitText text={t.headline} className="font-serif" em={t.headline.split(" ").slice(-1)} />
+        </h2>
+
+        <div className="mt-14 flex flex-wrap items-center gap-4">
+          <Magnetic>
+            <a
+              href={t.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 text-base font-medium text-paper"
+            >
+              {t.getInTouch}
+              <ArrowUpRight className="h-5 w-5 transition-transform duration-500 ease-expo group-hover:rotate-45" />
+            </a>
+          </Magnetic>
+          <a
             href={t.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/10 hover:text-white"
+            className="link-underline text-base text-paper/80 hover:text-paper"
           >
-            <Github className="h-5 w-5" />
-          </Link>
-          <Link
-            href={t.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-zinc-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/10 hover:text-white"
-          >
-            <Linkedin className="h-5 w-5" />
-          </Link>
+            github.com/SantiTN77 ↗
+          </a>
         </div>
 
-        <Link
-          href={t.linkedinUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-zinc-950 transition-all duration-300 hover:bg-zinc-200"
-        >
-          {t.getInTouch}
-          <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </Link>
-
-        <p className="mt-4 font-mono text-xs text-zinc-600">
-          © {new Date().getFullYear()} {t.name}. {t.built}
-        </p>
-      </Reveal>
+        <FadeIn className="mt-24 flex flex-wrap items-end justify-between gap-6 border-t border-white/15 pt-6 font-mono text-[11px] text-paper/50">
+          <span>
+            © {new Date().getFullYear()} {t.name}. {t.built}
+          </span>
+          <a href="#top" className="link-underline hover:text-paper">
+            ↑ Top
+          </a>
+        </FadeIn>
+      </div>
     </footer>
   );
 }

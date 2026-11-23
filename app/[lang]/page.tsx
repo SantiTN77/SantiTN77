@@ -8,6 +8,7 @@ import { Experience } from "@/components/Experience";
 import { Automations } from "@/components/Automations";
 import { TechStack } from "@/components/TechStack";
 import { Footer } from "@/components/Footer";
+import { ScrollProgress, SmoothScroll } from "@/components/motion";
 
 export default async function Home({
   params,
@@ -19,16 +20,20 @@ export default async function Home({
   const c = getContent(safe);
 
   return (
-    <main className="relative min-h-screen bg-zinc-950 text-white">
+    <>
+      <SmoothScroll />
+      <ScrollProgress />
       <Navbar lang={safe} t={c.nav} />
-      <Hero t={c.hero} />
-      <GcpArchitecture t={c.gcp} />
-      <FeaturedProject t={c.featured} />
-      <Projects t={c.projects} />
-      <Experience t={c.experience} />
-      <Automations t={c.automations} />
-      <TechStack t={c.techStack} />
+      <main className="relative">
+        <Hero t={c.hero} />
+        <GcpArchitecture t={c.gcp} />
+        <FeaturedProject t={c.featured} />
+        <Projects t={c.projects} />
+        <Experience t={c.experience} />
+        <Automations t={c.automations} viewLabel={safe === "es" ? "Ver arquitectura" : "View architecture"} />
+        <TechStack t={c.techStack} />
+      </main>
       <Footer t={c.footer} />
-    </main>
+    </>
   );
 }

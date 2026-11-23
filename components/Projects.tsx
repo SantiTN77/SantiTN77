@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { ArrowUpRight, Trophy, ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Section, SectionHeading } from "./Section";
-import { Reveal } from "./Reveal";
+import { FadeIn } from "./motion";
 import type { Content } from "@/lib/content";
 
 export function Projects({ t }: { t: Content["projects"] }) {
@@ -9,91 +8,67 @@ export function Projects({ t }: { t: Content["projects"] }) {
     <Section id="projects">
       <SectionHeading index="03" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
 
-      <div className="flex flex-col gap-6">
+      <div className="border-b border-line">
         {t.items.map((item, i) => (
-          <Reveal key={item.title} variant="up" delay={i * 90}>
-            <article className="group overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/30 p-5 transition-all duration-300 hover:border-white/20 sm:p-7">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                {item.badge ? (
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 font-mono text-[11px] font-medium text-amber-300">
-                    <Trophy className="h-3 w-3" />
-                    {item.badge}
-                  </span>
-                ) : null}
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-mono text-[11px] font-medium text-emerald-300">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
-                  {t.liveBadge}
-                </span>
-              </div>
-
-              <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
-                <h3 className="text-balance text-lg font-semibold tracking-tight text-white sm:text-xl">
-                  {item.title}
-                </h3>
-
-                <div className="flex shrink-0 flex-wrap gap-3">
-                  <Link
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/link inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/10"
-                  >
-                    {item.cta}
-                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                  </Link>
-                  {item.githubUrl ? (
-                    <Link
-                      href={item.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-zinc-300 transition-all duration-300 hover:border-white/25 hover:text-white"
-                    >
-                      <Github className="h-4 w-4" />
-                      {t.codeCta}
-                    </Link>
+          <FadeIn key={item.title} delay={i * 0.06}>
+            <article className="group relative grid grid-cols-12 gap-x-6 gap-y-4 border-t border-line py-9 transition-colors duration-500 hover:bg-paper-deep/60 md:px-4">
+              <div className="col-span-12 flex items-start gap-4 md:col-span-5">
+                <span className="mt-1.5 font-mono text-xs text-accent">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <h3 className="text-balance text-2xl font-medium leading-tight tracking-tight transition-transform duration-500 ease-expo group-hover:translate-x-1.5">
+                    {item.title}
+                  </h3>
+                  {item.badge ? (
+                    <span className="mt-3 inline-block rounded-full bg-accent-soft px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-accent-ink">
+                      {item.badge}
+                    </span>
                   ) : null}
                 </div>
               </div>
 
-              <p className="mt-3 max-w-3xl text-balance text-sm leading-relaxed text-zinc-400">
-                {item.description}
-              </p>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {item.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-md border border-white/10 bg-white/[0.03] px-2.5 py-1 font-mono text-xs text-zinc-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {item.pages.length > 0 ? (
-                <>
-                  <p className="mb-3 mt-6 font-mono text-xs uppercase tracking-widest text-accent-soft/80">
-                    {item.pagesLabel}
-                  </p>
-                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                    {item.pages.map((page, idx) => (
-                      <Reveal as="div" key={page.url} variant="up" delay={idx * 90}>
-                        <Link
-                          href={page.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/page flex items-center justify-between gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.07]"
-                        >
-                          <span className="truncate text-sm font-medium text-white">{page.name}</span>
-                          <ExternalLink className="h-4 w-4 shrink-0 text-zinc-400 transition-transform duration-300 group-hover/page:-translate-y-0.5 group-hover/page:translate-x-0.5 group-hover/page:text-accent-soft" />
-                        </Link>
-                      </Reveal>
+              <div className="col-span-12 md:col-span-5">
+                <p className="text-pretty text-[15px] leading-relaxed text-ink-muted">{item.description}</p>
+                <p className="mt-4 font-mono text-[11px] leading-relaxed text-ink-faint">{item.stack.join("  /  ")}</p>
+                {item.pages.length > 0 ? (
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                    {item.pages.map((page) => (
+                      <a
+                        key={page.url}
+                        href={page.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline text-ink-soft hover:text-ink"
+                      >
+                        {page.name} ↗
+                      </a>
                     ))}
                   </div>
-                </>
-              ) : null}
+                ) : null}
+              </div>
+
+              <div className="col-span-12 flex gap-2 md:col-span-2 md:flex-col md:items-end">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/l inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-ink px-4 py-2 text-sm text-paper"
+                >
+                  {item.cta}
+                  <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-500 ease-expo group-hover/l:-translate-y-0.5 group-hover/l:translate-x-0.5" />
+                </a>
+                {item.githubUrl ? (
+                  <a
+                    href={item.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-line-strong px-4 py-2 text-sm text-ink-soft transition-colors hover:border-ink hover:text-ink"
+                  >
+                    {t.codeCta}
+                  </a>
+                ) : null}
+              </div>
             </article>
-          </Reveal>
+          </FadeIn>
         ))}
       </div>
     </Section>

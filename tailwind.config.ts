@@ -8,28 +8,21 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       colors: {
-        accent: {
-          DEFAULT: "#a78bfa",
-          soft: "#c4b5fd",
-        },
+        paper: { DEFAULT: "#F3F1EA", deep: "#EAE6DB", card: "#FAF9F5" },
+        ink: { DEFAULT: "#151412", soft: "#3B3934", muted: "#6E6A60", faint: "#9A958A" },
+        line: { DEFAULT: "#D8D3C6", strong: "#BDB6A6" },
+        accent: { DEFAULT: "#D4471C", soft: "#F2D5C9", ink: "#A9330F" },
       },
-      keyframes: {
-        "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-in": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
+      letterSpacing: {
+        tightest: "-0.045em",
       },
-      animation: {
-        "fade-up": "fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
-        "fade-in": "fade-in 0.9s ease forwards",
+      transitionTimingFunction: {
+        expo: "cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },

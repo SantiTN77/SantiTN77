@@ -3,180 +3,125 @@
 @tailwind utilities;
 
 :root {
-  --background: #09090b; /* zinc-950 */
-  --foreground: #fafafa;
+  --paper: #f3f1ea;
+  --ink: #151412;
 }
 
 @layer base {
   * {
-    @apply border-white/10;
+    @apply border-line;
   }
 
   html {
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
   }
 
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
   body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-feature-settings: "ss01", "cv01", "cv03";
+    background-color: var(--paper);
+    color: var(--ink);
+    font-feature-settings: "ss01", "cv11";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: rgba(167, 139, 250, 0.25);
-    color: #fff;
+    background-color: #151412;
+    color: #f3f1ea;
+  }
+
+  :focus-visible {
+    outline: 2px solid #d4471c;
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
 @layer utilities {
-  /* Subtle dotted grid backdrop, midudev-style */
-  .bg-grid {
-    background-image: radial-gradient(
-      circle at 1px 1px,
-      rgba(255, 255, 255, 0.06) 1px,
-      transparent 0
-    );
-    background-size: 32px 32px;
-  }
-
   .text-balance {
     text-wrap: balance;
   }
-
-  .text-gradient {
-    background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .text-pretty {
+    text-wrap: pretty;
   }
 
-  /* Animation reveal delays */
-  .delay-1 {
-    animation-delay: 0.1s;
+  /* Fine paper grain, no neon glows */
+  .grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0 0.06 0 0 0 0.09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
-  .delay-2 {
-    animation-delay: 0.2s;
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .delay-3 {
-    animation-delay: 0.3s;
-  }
-  .delay-4 {
-    animation-delay: 0.4s;
-  }
-  .opacity-0-start {
-    opacity: 0;
+  .link-underline:hover {
+    background-size: 100% 1px;
   }
 }
 
-/* ---------------- Scroll reveal (IntersectionObserver) ---------------- */
+/* Legacy reveal (kept for any component still using <Reveal>) */
 .reveal {
   opacity: 0;
+  transform: translateY(24px);
   transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
-}
-.reveal-up {
-  transform: translateY(28px);
-}
-.reveal-down {
-  transform: translateY(-28px);
-}
-.reveal-left {
-  transform: translateX(-36px);
-}
-.reveal-right {
-  transform: translateX(36px);
-}
-.reveal-scale {
-  transform: scale(0.94);
-}
-.reveal-blur {
-  transform: translateY(20px);
-  filter: blur(10px);
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.is-visible {
   opacity: 1;
   transform: none;
-  filter: none;
 }
 
-/* Animated underline that draws in when a heading reveals */
-.rule-grow {
-  transform-origin: left center;
-  transform: scaleX(0);
-  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-.is-visible .rule-grow,
-.reveal.is-visible.rule-grow {
-  transform: scaleX(1);
+.animate-marquee {
+  animation: marquee 40s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .rule-grow {
+  .reveal {
     opacity: 1 !important;
     transform: none !important;
-    filter: none !important;
     transition: none !important;
   }
-  .animate-fade-up,
-  .animate-fade-in {
-    animation: none !important;
-    opacity: 1 !important;
-  }
-  html {
-    scroll-behavior: auto;
+  .animate-marquee {
+    animation: none;
   }
 }
 
-/* Slow ambient drift for hero glow */
-@keyframes glow-drift {
-  0%,
-  100% {
-    transform: translate(-50%, 0) scale(1);
-    opacity: 0.85;
-  }
-  50% {
-    transform: translate(-50%, 18px) scale(1.08);
-    opacity: 1;
-  }
-}
-.animate-glow {
-  animation: glow-drift 9s ease-in-out infinite;
-}
-
-/* Floating bob for the hero avatar */
-@keyframes bob {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-.animate-bob {
-  animation: bob 5s ease-in-out infinite;
-}
-
-/* Thin, unobtrusive scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--paper);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: #cfc9ba;
+  border: 3px solid var(--paper);
   border-radius: 9999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
 }

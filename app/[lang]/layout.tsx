@@ -1,21 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import "../globals.css";
 import { getContent, isLang, LANGS, DEFAULT_LANG, type Lang } from "@/lib/content";
 
-const inter = Inter({
+const sans = Geist({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
+const mono = Geist_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" });
+const serif = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
   display: "swap",
-  variable: "--font-geist-sans",
+  variable: "--font-serif",
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist-mono",
-});
-
-const SITE_URL = "https://santi-tn-77-danitafur77-gmailcoms-projects.vercel.app";
+const SITE_URL = "https://danieltafur.vercel.app";
 
 export function generateStaticParams() {
   return LANGS.map((lang) => ({ lang }));
@@ -56,7 +54,7 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
-  themeColor: "#09090b",
+  themeColor: "#F3F1EA",
   width: "device-width",
   initialScale: 1,
 };
@@ -72,8 +70,8 @@ export default async function RootLayout({
   const safe: Lang = isLang(lang) ? lang : DEFAULT_LANG;
 
   return (
-    <html lang={safe} className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang={safe} className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
+      <body className="grain bg-paper font-sans text-ink antialiased">{children}</body>
     </html>
   );
 }

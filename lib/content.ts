@@ -166,10 +166,20 @@ const dict = {
       experience: "Experience",
       automations: "Automations",
       stack: "Stack",
+      contact: "Contact",
     },
     hero: {
       badge: "Open to AI Agent Engineer & GCP AI Architect roles",
       role: "AI Agent Engineer · AI Solutions Architect (GCP)",
+      headline: { pre: "Agentic AI systems", em: "built for production", post: "on Google Cloud." },
+      location: "Colombia · Remote",
+      ctaWork: "See the work",
+      scroll: "Scroll to explore",
+      facts: [
+        { k: "3", v: "systems live on GCP" },
+        { k: "0", v: "public endpoints" },
+        { k: "$0", v: "idle cost" },
+      ],
       bio: "I design, ship and secure agentic systems on Google Cloud: multi-agent orchestration with Google ADK, A2A and MCP, hybrid RAG with automated LLMOps quality gates, and private, scale-to-zero infrastructure on Cloud Run with Terraform. Architecture, production, security and cost — not just demos.",
     },
     gcp: {
@@ -179,6 +189,9 @@ const dict = {
       watch: "Narrated demo",
       live: "Live app",
       code: "Source code",
+      play: "Play demo",
+      highlightsLabel: "What it proves",
+      stackLabel: "Stack",
       items: [
         {
           title: "Enterprise Multi-Agent Risk & Compliance",
@@ -309,7 +322,7 @@ const dict = {
       headline: "Let's build something autonomous.",
       sub: "Open to AI Agent Engineer and GCP AI Solutions Architect roles.",
       getInTouch: "Get in touch",
-      built: "Built with Next.js & Tailwind CSS.",
+      built: "Built with Next.js, Motion & Tailwind CSS.",
     },
   },
   es: {
@@ -325,10 +338,20 @@ const dict = {
       experience: "Experiencia",
       automations: "Automatizaciones",
       stack: "Stack",
+      contact: "Contacto",
     },
     hero: {
       badge: "Abierto a roles de AI Agent Engineer y AI Architect en GCP",
       role: "AI Agent Engineer · AI Solutions Architect (GCP)",
+      headline: { pre: "Sistemas de IA agéntica", em: "hechos para producción", post: "en Google Cloud." },
+      location: "Colombia · Remoto",
+      ctaWork: "Ver proyectos",
+      scroll: "Desliza para explorar",
+      facts: [
+        { k: "3", v: "sistemas en vivo en GCP" },
+        { k: "0", v: "endpoints públicos" },
+        { k: "$0", v: "costo en reposo" },
+      ],
       bio: "Diseño, despliego y aseguro sistemas agénticos en Google Cloud: orquestación multiagente con Google ADK, A2A y MCP, RAG híbrido con quality gates automáticos de LLMOps e infraestructura privada que escala a cero en Cloud Run con Terraform. Arquitectura, producción, seguridad y costos, no solo demos.",
     },
     gcp: {
@@ -338,6 +361,9 @@ const dict = {
       watch: "Demo narrada",
       live: "App en vivo",
       code: "Código fuente",
+      play: "Ver demo",
+      highlightsLabel: "Qué demuestra",
+      stackLabel: "Stack",
       items: [
         {
           title: "Sistema multiagente de riesgo y cumplimiento",
@@ -469,7 +495,7 @@ const dict = {
       headline: "Construyamos algo autónomo.",
       sub: "Abierto a roles de AI Agent Engineer y AI Solutions Architect en GCP.",
       getInTouch: "Hablemos",
-      built: "Hecho con Next.js & Tailwind CSS.",
+      built: "Hecho con Next.js, Motion y Tailwind CSS.",
     },
   },
 } as const;

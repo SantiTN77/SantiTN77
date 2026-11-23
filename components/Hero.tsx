@@ -1,77 +1,156 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
-import { Github, Linkedin, ArrowUpRight, Sparkles } from "lucide-react";
+import { useRef } from "react";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import type { Content } from "@/lib/content";
+import { EASE, Magnetic, SplitText } from "./motion";
 
-export function Hero({ t }: { t: Content["hero"] }) {
+const MARQUEE = [
+  "Google ADK",
+  "A2A",
+  "Model Context Protocol",
+  "Vertex AI · Gemini",
+  "Cloud Run",
+  "Firestore Vector Search",
+  "Hybrid RAG",
+  "LLMOps",
+  "Terraform",
+  "Cloud Workflows",
+  "Secret Manager",
+  "FinOps",
+];
+
+export function Hero({ t, stack }: { t: Content["hero"]; stack?: string[] }) {
+  const ref = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const photoY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 90]);
+  const headY = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -60]);
+  const items = stack ?? MARQUEE;
+
   return (
-    <section
-      id="top"
-      className="relative flex min-h-[92vh] items-center justify-center overflow-hidden px-6 pt-24"
-    >
-      {/* Ambient gradient glow */}
-      <div
-        aria-hidden
-        className="animate-glow pointer-events-none absolute left-1/2 top-0 h-[480px] w-[480px] -translate-x-1/2 rounded-full bg-accent/15 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-grid [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
-      />
+    <section ref={ref} id="top" className="relative overflow-hidden pt-28 md:pt-32">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+        {/* meta row */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.1 }}
+          className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4 font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted"
+        >
+          <span>{t.role}</span>
+          <span className="flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            {t.badge}
+          </span>
+        </motion.div>
 
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center">
-        {/* Profile photo */}
-        <div className="opacity-0-start animate-fade-up mb-5">
-          <div className="animate-bob relative h-24 w-24 overflow-hidden rounded-full border-2 border-white/15 ring-4 ring-accent/20 sm:h-28 sm:w-28">
-            <Image
-              src="/profile.jpg"
-              alt={t.name}
-              fill
-              className="object-cover"
-              priority
-            />
+        {/* headline */}
+        <motion.h1
+          style={{ y: headY }}
+          className="mt-10 text-[13vw] leading-[0.92] tracking-tightest sm:text-[10.5vw] lg:text-[136px]"
+        >
+          <SplitText text={t.headline.pre} className="block font-medium" immediate />
+          <SplitText
+            text={t.headline.em}
+            className="block font-serif italic text-accent"
+            immediate
+          />
+          <SplitText text={t.headline.post} className="block font-medium" immediate />
+        </motion.h1>
+
+        {/* lower grid */}
+        <div className="mt-14 grid grid-cols-12 gap-x-6 gap-y-10 pb-16 md:mt-20 md:pb-24">
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: EASE, delay: 0.7 }}
+            className="col-span-12 md:col-span-6 lg:col-span-5"
+          >
+            <p className="text-pretty text-lg leading-relaxed text-ink-soft md:text-xl">{t.bio}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Magnetic>
+                <a
+                  href="#gcp"
+                  className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-paper"
+                >
+                  {t.ctaWork}
+                  <ArrowDownRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:rotate-[-45deg]" />
+                </a>
+              </Magnetic>
+              <a
+                href={t.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-full border border-line-strong px-5 py-3.5 text-sm text-ink transition-colors duration-300 hover:border-ink"
+              >
+                LinkedIn
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href={t.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 rounded-full border border-line-strong px-5 py-3.5 text-sm text-ink transition-colors duration-300 hover:border-ink"
+              >
+                GitHub
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+            </div>
+          </motion.div>
+
+          <div className="col-span-12 grid grid-cols-3 content-end gap-4 md:col-span-6 lg:col-span-4">
+            {t.facts.map((f, i) => (
+              <motion.div
+                key={f.v}
+                initial={reduce ? false : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: EASE, delay: 0.85 + i * 0.1 }}
+                className="border-t border-ink pt-3"
+              >
+                <div className="font-serif text-5xl leading-none md:text-6xl">{f.k}</div>
+                <div className="mt-2 text-xs leading-snug text-ink-muted md:text-sm">{f.v}</div>
+              </motion.div>
+            ))}
           </div>
-        </div>
 
-        <div className="opacity-0-start animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-zinc-300">
-          <Sparkles className="h-3.5 w-3.5 text-accent-soft" />
-          {t.badge}
-        </div>
-
-        <h1 className="opacity-0-start animate-fade-up delay-1 mt-7 text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
-          {t.name}
-        </h1>
-
-        <p className="opacity-0-start animate-fade-up delay-2 mt-5 text-balance text-lg font-medium text-zinc-300 sm:text-xl md:text-2xl">
-          {t.role}
-        </p>
-
-        <p className="opacity-0-start animate-fade-up delay-3 mt-6 max-w-2xl text-balance text-base leading-relaxed text-zinc-400 sm:text-lg">
-          {t.bio}
-        </p>
-
-        <div className="opacity-0-start animate-fade-up delay-4 mt-9 flex flex-col items-center gap-3 sm:flex-row">
-          <Link
-            href={t.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-zinc-950 transition-all duration-300 hover:bg-zinc-200 sm:w-auto"
+          <motion.div
+            initial={reduce ? false : { clipPath: "inset(100% 0 0 0)" }}
+            animate={{ clipPath: "inset(0% 0 0 0)" }}
+            transition={{ duration: 1.3, ease: EASE, delay: 0.4 }}
+            className="relative col-span-6 hidden aspect-[4/5] overflow-hidden rounded-[18px] bg-paper-deep lg:col-span-3 lg:block"
           >
-            <Github className="h-4 w-4" />
-            {t.github}
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
+            <motion.div style={{ y: photoY }} className="absolute -inset-y-16 inset-x-0">
+              <Image
+                src="/profile.jpg"
+                alt={t.name}
+                fill
+                priority
+                sizes="(min-width: 1024px) 300px, 50vw"
+                className="object-cover grayscale-[35%]"
+              />
+            </motion.div>
+            <span className="absolute bottom-3 left-3 rounded-full bg-paper/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-ink">
+              {t.location}
+            </span>
+          </motion.div>
+        </div>
+      </div>
 
-          <Link
-            href={t.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:border-white/25 hover:bg-white/10 sm:w-auto"
-          >
-            <Linkedin className="h-4 w-4" />
-            {t.linkedin}
-            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
+      {/* tech marquee */}
+      <div className="relative border-y border-line bg-paper-deep/60 py-4">
+        <div className="flex w-max animate-marquee gap-10 whitespace-nowrap font-mono text-xs uppercase tracking-[0.16em] text-ink-muted hover:[animation-play-state:paused]">
+          {[...items, ...items].map((s, i) => (
+            <span key={i} className="flex items-center gap-10">
+              {s}
+              <span className="text-accent">✳</span>
+            </span>
+          ))}
         </div>
       </div>
     </section>
