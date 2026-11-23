@@ -4,6 +4,7 @@ import type { Content, Lang } from "@/lib/content";
 
 export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
   const links = [
+    { href: "#gcp", label: t.gcp },
     { href: "#work", label: t.work },
     { href: "#projects", label: t.projects },
     { href: "#experience", label: t.experience },
@@ -26,7 +27,7 @@ export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-full px-3 py-1.5 text-sm text-zinc-400 transition-colors duration-300 hover:text-white"
+              className="whitespace-nowrap rounded-full px-3 py-1.5 text-sm text-zinc-400 transition-colors duration-300 hover:text-white"
             >
               {link.label}
             </Link>

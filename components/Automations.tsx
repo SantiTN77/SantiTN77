@@ -36,7 +36,7 @@ export function Automations({ t }: { t: Content["automations"] }) {
   return (
     <Section id="automations">
       <SectionHeading
-        index="04"
+        index="05"
         title={t.sectionTitle}
         subtitle={t.sectionSubtitle}
       />

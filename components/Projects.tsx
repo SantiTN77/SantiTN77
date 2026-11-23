@@ -7,7 +7,7 @@ import type { Content } from "@/lib/content";
 export function Projects({ t }: { t: Content["projects"] }) {
   return (
     <Section id="projects">
-      <SectionHeading index="02" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
+      <SectionHeading index="03" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
 
       <div className="flex flex-col gap-6">
         {t.items.map((item, i) => (

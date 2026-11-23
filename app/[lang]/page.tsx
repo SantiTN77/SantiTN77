@@ -1,6 +1,7 @@
 import { getContent, isLang, DEFAULT_LANG, type Lang } from "@/lib/content";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { GcpArchitecture } from "@/components/GcpArchitecture";
 import { FeaturedProject } from "@/components/FeaturedProject";
 import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
@@ -21,6 +22,7 @@ export default async function Home({
     <main className="relative min-h-screen bg-zinc-950 text-white">
       <Navbar lang={safe} t={c.nav} />
       <Hero t={c.hero} />
+      <GcpArchitecture t={c.gcp} />
       <FeaturedProject t={c.featured} />
       <Projects t={c.projects} />
       <Experience t={c.experience} />

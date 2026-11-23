@@ -39,7 +39,7 @@ function VideoPlayer({ t }: { t: Content["featured"] }) {
 export function FeaturedProject({ t }: { t: Content["featured"] }) {
   return (
     <Section id="work">
-      <SectionHeading index="01" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
+      <SectionHeading index="02" title={t.sectionTitle} subtitle={t.sectionSubtitle} />
 
       <Reveal variant="scale">
         <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/30 p-2 transition-all duration-300 hover:border-white/20">

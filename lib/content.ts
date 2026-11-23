@@ -93,8 +93,37 @@ const orionAi = {
 
 const projectsData = [ghostWriter, orionAi];
 
+const gcpProjectsData = [
+  {
+    url: "https://enterprise-adk-a2a-mcp.vercel.app",
+    repo: "https://github.com/SantiTN77/enterprise-adk-a2a-mcp",
+    video: "/videos/adk-demo.mp4",
+    poster: "/videos/adk-poster.jpg",
+    stack: ["Google ADK", "A2A", "MCP", "Vertex AI Gemini", "Cloud Run", "Secret Manager", "Terraform", "Next.js BFF"],
+  },
+  {
+    url: "https://hybrid-rag-llmops-gcp-web.vercel.app",
+    repo: "https://github.com/SantiTN77/hybrid-rag-llmops-gcp",
+    video: "/videos/rag-demo.mp4",
+    poster: "/videos/rag-poster.jpg",
+    stack: ["Firestore Vector Search", "BM25 + RRF", "Vertex AI Gemini", "Cloud Run Jobs", "Cloud Workflows", "LLMOps Gate", "Terraform"],
+  },
+  {
+    url: "https://gcp-ai-reference-architectures.vercel.app",
+    repo: "https://github.com/SantiTN77/gcp-ai-reference-architectures",
+    video: "/videos/arch-demo.mp4",
+    poster: "/videos/arch-poster.jpg",
+    stack: ["Reference Architectures", "ADRs", "FinOps", "STRIDE", "OWASP LLM Top 10", "VPC-SC", "Cloud DLP"],
+  },
+];
+
 const techItems = [
   [
+    "Google Cloud (GCP)",
+    "Vertex AI",
+    "Google ADK",
+    "Cloud Run",
+    "Terraform",
     "Python",
     "FastAPI",
     "Gemini API",
@@ -126,11 +155,12 @@ const techItems = [
 const dict = {
   en: {
     meta: {
-      title: "Daniel Tafur — AI Engineer & Automation Architect",
+      title: "Daniel Tafur — AI Agent Engineer · AI Solutions Architect (GCP)",
       description:
-        "I design and ship autonomous agents, RAG systems and AI-augmented workflows that eliminate manual enterprise processes through advanced LLM orchestration.",
+        "AI Agent Engineer and AI Solutions Architect on Google Cloud: multi-agent systems with ADK, A2A and MCP, production RAG with LLMOps gates, and secure serverless architecture on Cloud Run.",
     },
     nav: {
+      gcp: "GCP AI",
       work: "Work",
       projects: "Projects",
       experience: "Experience",
@@ -138,9 +168,46 @@ const dict = {
       stack: "Stack",
     },
     hero: {
-      badge: "Available for AI automation projects",
-      role: "AI Engineer · Full Stack & AI Automation Architect",
-      bio: "I build autonomous agents, RAG systems and AI-augmented workflows that eliminate manual enterprise processes through advanced LLM orchestration. My focus is turning slow, error-prone operations into reliable, self-running software.",
+      badge: "Open to AI Agent Engineer & GCP AI Architect roles",
+      role: "AI Agent Engineer · AI Solutions Architect (GCP)",
+      bio: "I design, ship and secure agentic systems on Google Cloud: multi-agent orchestration with Google ADK, A2A and MCP, hybrid RAG with automated LLMOps quality gates, and private, scale-to-zero infrastructure on Cloud Run with Terraform. Architecture, production, security and cost — not just demos.",
+    },
+    gcp: {
+      sectionTitle: "GCP AI Architecture — Production Builds",
+      sectionSubtitle:
+        "Open-source, deployed and narrated: multi-agent systems, RAG with an LLMOps gate, and the architecture documentation behind them.",
+      watch: "Narrated demo",
+      live: "Live app",
+      code: "Source code",
+      items: [
+        {
+          title: "Enterprise Multi-Agent Risk & Compliance",
+          tagline: "Google ADK orchestrator delegating to specialist agents over A2A, each with its own MCP tools, on private Cloud Run.",
+          highlights: [
+            "Parallel A2A delegation with per-agent OIDC audience verification",
+            "Stdio MCP servers over Cloud Storage, Secret Manager and Vertex AI",
+            "Zero public endpoints, scale-to-zero, rate-limited public BFF",
+          ],
+        },
+        {
+          title: "Hybrid RAG with an LLMOps Quality Gate",
+          tagline: "Firestore vector search + BM25 fused with RRF, grounded Gemini answers with chunk-level citations.",
+          highlights: [
+            "Golden-dataset gate blocks releases on hallucination, precision and recall",
+            "Per-query latency and token-cost telemetry",
+            "Ingestion as a Cloud Run job orchestrated by Cloud Workflows",
+          ],
+        },
+        {
+          title: "GCP + AI Reference Architectures & ADRs",
+          tagline: "Blueprints an architect delivers before code: diagrams, cost models, threat models and decision records.",
+          highlights: [
+            "Three-tier FinOps models and an interactive cost calculator",
+            "STRIDE threat models mapped to the OWASP Top 10 for LLMs",
+            "Quantitative ADRs: Cloud Run vs GKE, Flash vs Pro routing, MCP/A2A",
+          ],
+        },
+      ],
     },
     featured: {
       sectionTitle: "Featured Project",
@@ -194,7 +261,7 @@ const dict = {
       items: [
         {
           company: "MetaBiblioteca",
-          role: "Full Stack AI & Automation",
+          role: "AI Agent Engineer",
           description:
             "Engineered scalable internal orchestration workflows using n8n and Python microservices. Deployed production-ready conversational chatbots currently servicing high-traffic public university platforms, optimizing document ingestion and auditing pipelines.",
         },
@@ -240,18 +307,19 @@ const dict = {
     },
     footer: {
       headline: "Let's build something autonomous.",
-      sub: "Open to AI automation and full-stack engineering collaborations.",
+      sub: "Open to AI Agent Engineer and GCP AI Solutions Architect roles.",
       getInTouch: "Get in touch",
       built: "Built with Next.js & Tailwind CSS.",
     },
   },
   es: {
     meta: {
-      title: "Daniel Tafur — AI Engineer & Arquitecto de Automatización",
+      title: "Daniel Tafur — AI Agent Engineer · AI Solutions Architect (GCP)",
       description:
-        "Diseño y despliego agentes autónomos, sistemas RAG y flujos aumentados con IA que eliminan procesos manuales en la empresa mediante orquestación avanzada de LLMs.",
+        "AI Agent Engineer y AI Solutions Architect en Google Cloud: sistemas multiagente con ADK, A2A y MCP, RAG en producción con quality gates de LLMOps y arquitectura serverless segura en Cloud Run.",
     },
     nav: {
+      gcp: "GCP IA",
       work: "Proyecto",
       projects: "Proyectos",
       experience: "Experiencia",
@@ -259,9 +327,46 @@ const dict = {
       stack: "Stack",
     },
     hero: {
-      badge: "Disponible para proyectos de automatización con IA",
-      role: "AI Engineer · Full Stack & Arquitecto de Automatización IA",
-      bio: "Construyo agentes autónomos, sistemas RAG y flujos aumentados con IA que eliminan procesos manuales en la empresa mediante orquestación avanzada de LLMs. Mi enfoque es convertir operaciones lentas y propensas a errores en software confiable que se ejecuta solo.",
+      badge: "Abierto a roles de AI Agent Engineer y AI Architect en GCP",
+      role: "AI Agent Engineer · AI Solutions Architect (GCP)",
+      bio: "Diseño, despliego y aseguro sistemas agénticos en Google Cloud: orquestación multiagente con Google ADK, A2A y MCP, RAG híbrido con quality gates automáticos de LLMOps e infraestructura privada que escala a cero en Cloud Run con Terraform. Arquitectura, producción, seguridad y costos, no solo demos.",
+    },
+    gcp: {
+      sectionTitle: "Arquitectura de IA en GCP — Proyectos en producción",
+      sectionSubtitle:
+        "Código abierto, desplegado y con demo narrada: sistemas multiagente, RAG con un quality gate de LLMOps y la documentación de arquitectura detrás.",
+      watch: "Demo narrada",
+      live: "App en vivo",
+      code: "Código fuente",
+      items: [
+        {
+          title: "Sistema multiagente de riesgo y cumplimiento",
+          tagline: "Orquestador con Google ADK que delega a agentes especialistas vía A2A, cada uno con sus herramientas MCP, sobre Cloud Run privado.",
+          highlights: [
+            "Delegación A2A en paralelo con verificación OIDC por agente",
+            "Servidores MCP sobre Cloud Storage, Secret Manager y Vertex AI",
+            "Cero endpoints públicos, escala a cero y BFF público con rate limiting",
+          ],
+        },
+        {
+          title: "RAG híbrido con quality gate de LLMOps",
+          tagline: "Búsqueda vectorial en Firestore + BM25 fusionadas con RRF, respuestas de Gemini con citas a nivel de fragmento.",
+          highlights: [
+            "Golden dataset que bloquea despliegues por alucinación, precisión y recall",
+            "Telemetría de latencia y costo de tokens por consulta",
+            "Ingesta como Cloud Run job orquestado con Cloud Workflows",
+          ],
+        },
+        {
+          title: "Arquitecturas de referencia GCP + IA y ADRs",
+          tagline: "Lo que un arquitecto entrega antes del código: diagramas, modelos de costo, modelos de amenazas y registros de decisión.",
+          highlights: [
+            "Modelos FinOps en tres niveles y calculadora de costos interactiva",
+            "Modelos STRIDE mapeados al OWASP Top 10 para LLMs",
+            "ADRs cuantitativos: Cloud Run vs GKE, Flash vs Pro, MCP/A2A",
+          ],
+        },
+      ],
     },
     featured: {
       sectionTitle: "Proyecto Destacado",
@@ -316,7 +421,7 @@ const dict = {
       items: [
         {
           company: "MetaBiblioteca",
-          role: "Full Stack IA & Automatización",
+          role: "AI Agent Engineer",
           description:
             "Desarrollé flujos de orquestación internos escalables con n8n y microservicios en Python. Desplegué chatbots conversacionales en producción que hoy atienden plataformas universitarias públicas de alto tráfico, optimizando la ingesta de documentos y los pipelines de auditoría.",
         },
@@ -362,7 +467,7 @@ const dict = {
     },
     footer: {
       headline: "Construyamos algo autónomo.",
-      sub: "Abierto a colaboraciones de automatización con IA e ingeniería full-stack.",
+      sub: "Abierto a roles de AI Agent Engineer y AI Solutions Architect en GCP.",
       getInTouch: "Hablemos",
       built: "Hecho con Next.js & Tailwind CSS.",
     },
@@ -393,6 +498,10 @@ export function getContent(lang: Lang) {
           pages: item.pages.map((p, j) => ({ ...p, url: pageUrls[j] })),
         };
       }),
+    },
+    gcp: {
+      ...d.gcp,
+      items: d.gcp.items.map((item, i) => ({ ...item, ...gcpProjectsData[i] })),
     },
     hero: {
       ...d.hero,
