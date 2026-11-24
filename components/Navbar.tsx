@@ -93,7 +93,7 @@ export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
             <LanguageSwitcher lang={lang} />
             <a
               href="#contact"
-              className="hidden rounded-full bg-ink px-4 py-2 text-sm text-paper transition-transform duration-300 hover:-translate-y-px sm:inline-flex"
+              className="hidden rounded-full bg-accent px-4 py-2 text-sm text-paper hover:bg-navy transition-transform duration-300 hover:-translate-y-px sm:inline-flex"
             >
               {t.contact}
             </a>
@@ -118,7 +118,7 @@ export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
             transition={{ duration: 0.7, ease: EASE }}
-            className="fixed inset-0 z-40 flex flex-col justify-end bg-ink px-6 pb-14 text-paper md:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-end bg-navy-deep blueprint-dark px-6 pb-14 text-paper md:hidden"
           >
             {[...links, { href: "#contact", label: t.contact }].map((link, i) => (
               <motion.a
@@ -128,7 +128,7 @@ export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
                 initial={{ y: 40, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.15 + i * 0.05, duration: 0.7, ease: EASE }}
-                className="flex items-baseline gap-4 border-b border-white/10 py-4 font-serif text-4xl"
+                className="flex items-baseline gap-4 border-b border-white/10 py-4 text-3xl font-medium tracking-tight"
               >
                 <span className="font-mono text-xs text-accent">0{i + 1}</span>
                 {link.label}

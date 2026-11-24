@@ -38,7 +38,7 @@ export function VideoStage({
     <motion.div
       ref={ref}
       style={{ scale, borderRadius: radius }}
-      className="relative aspect-video w-full overflow-hidden bg-ink shadow-[0_40px_80px_-40px_rgba(21,20,18,0.45)]"
+      className="relative aspect-video w-full overflow-hidden bg-navy-deep shadow-[0_40px_80px_-40px_rgba(17,54,109,0.45)]"
     >
       {playing ? (
         <video

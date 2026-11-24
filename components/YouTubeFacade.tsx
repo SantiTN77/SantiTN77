@@ -14,7 +14,7 @@ export function YouTubeFacade({ id, title }: { id: string; title: string }) {
       whileInView={{ clipPath: "inset(0% 0% 0% 0% round 18px)" }}
       viewport={{ once: true, margin: "0px 0px -15% 0px" }}
       transition={{ duration: 1.2, ease: EASE }}
-      className="relative aspect-video w-full overflow-hidden rounded-[18px] bg-ink"
+      className="relative aspect-video w-full overflow-hidden rounded-[18px] bg-navy-deep"
     >
       {on ? (
         <iframe

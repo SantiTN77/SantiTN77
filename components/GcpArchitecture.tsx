@@ -15,7 +15,7 @@ export function GcpArchitecture({ t }: { t: Content["gcp"] }) {
             {/* title block */}
             <div className="col-span-12 grid grid-cols-12 items-end gap-x-6 gap-y-4">
               <FadeIn className="col-span-12 md:col-span-3">
-                <span className="block font-serif text-[88px] leading-[0.8] text-ink/90 md:text-[120px]">
+                <span className="block font-mono text-[72px] font-light leading-[0.8] text-accent md:text-[96px]">
                   0{i + 1}
                 </span>
               </FadeIn>

@@ -7,7 +7,7 @@ import type { Content } from "@/lib/content";
 
 function Frame({ src, alt, label }: { src: string; alt: string; label: string }) {
   return (
-    <figure className="overflow-hidden rounded-[14px] bg-ink">
+    <figure className="overflow-hidden rounded-[14px] bg-navy-deep">
       <figcaption className="flex items-center gap-2 border-b border-white/10 px-4 py-2.5 font-mono text-[11px] text-white/60">
         <span className="flex gap-1">
           <span className="h-2 w-2 rounded-full bg-white/20" />

@@ -13,10 +13,11 @@ const config: Config = {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       colors: {
-        paper: { DEFAULT: "#F3F1EA", deep: "#EAE6DB", card: "#FAF9F5" },
-        ink: { DEFAULT: "#151412", soft: "#3B3934", muted: "#6E6A60", faint: "#9A958A" },
-        line: { DEFAULT: "#D8D3C6", strong: "#BDB6A6" },
-        accent: { DEFAULT: "#D4471C", soft: "#F2D5C9", ink: "#A9330F" },
+        paper: { DEFAULT: "#F7F9FC", deep: "#EDF2FA", card: "#FFFFFF" },
+        ink: { DEFAULT: "#0E1B33", soft: "#2A3852", muted: "#5B6880", faint: "#94A0B8" },
+        line: { DEFAULT: "#DBE3F3", strong: "#BFD2F2" },
+        accent: { DEFAULT: "#1F4F98", soft: "#E3ECFB", ink: "#11366D", bright: "#4F7CFF" },
+        navy: { DEFAULT: "#11366D", deep: "#0B2247" },
       },
       letterSpacing: {
         tightest: "-0.045em",

@@ -23,7 +23,7 @@ export function LanguageSwitcher({ lang }: { lang: Lang }) {
             {active ? (
               <motion.span
                 layoutId="lang-pill"
-                className="absolute inset-0 -z-10 rounded-full bg-ink"
+                className="absolute inset-0 -z-10 rounded-full bg-accent"
                 transition={{ type: "spring", stiffness: 420, damping: 34 }}
               />
             ) : null}

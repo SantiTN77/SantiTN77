@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono, IBM_Plex_Serif } from "next/font/google";
 import "../globals.css";
 import { getContent, isLang, LANGS, DEFAULT_LANG, type Lang } from "@/lib/content";
 
-const sans = Geist({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
-const mono = Geist_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" });
-const serif = Instrument_Serif({
+const sans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["300", "400", "500", "600"], display: "swap", variable: "--font-sans" });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["300", "400", "500"], display: "swap", variable: "--font-mono" });
+const serif = IBM_Plex_Serif({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
+  weight: ["300", "400"],
+  style: ["italic"],
   display: "swap",
   variable: "--font-serif",
 });
@@ -54,7 +54,7 @@ export async function generateMetadata({
 }
 
 export const viewport: Viewport = {
-  themeColor: "#F3F1EA",
+  themeColor: "#F7F9FC",
   width: "device-width",
   initialScale: 1,
 };

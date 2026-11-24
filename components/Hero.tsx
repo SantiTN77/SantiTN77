@@ -77,7 +77,7 @@ export function Hero({ t, stack }: { t: Content["hero"]; stack?: string[] }) {
               <Magnetic>
                 <a
                   href="#gcp"
-                  className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-paper"
+                  className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-medium text-paper shadow-[0_10px_30px_-12px_rgba(31,79,152,0.6)] transition-colors hover:bg-navy"
                 >
                   {t.ctaWork}
                   <ArrowDownRight className="h-4 w-4 transition-transform duration-500 ease-expo group-hover:rotate-[-45deg]" />
@@ -113,7 +113,7 @@ export function Hero({ t, stack }: { t: Content["hero"]; stack?: string[] }) {
                 transition={{ duration: 1, ease: EASE, delay: 0.85 + i * 0.1 }}
                 className="border-t border-ink pt-3"
               >
-                <div className="font-serif text-5xl leading-none md:text-6xl">{f.k}</div>
+                <div className="text-4xl font-medium leading-none tracking-tight text-accent md:text-5xl">{f.k}</div>
                 <div className="mt-2 text-xs leading-snug text-ink-muted md:text-sm">{f.v}</div>
               </motion.div>
             ))}

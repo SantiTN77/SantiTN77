@@ -12,7 +12,7 @@ export function Experience({ t }: { t: Content["experience"] }) {
           <FadeIn key={item.company}>
             <article className="grid grid-cols-12 gap-x-6 gap-y-4 border-t border-line py-10">
               <div className="col-span-12 md:col-span-4">
-                <h3 className="font-serif text-4xl leading-none md:text-5xl">{item.company}</h3>
+                <h3 className="text-3xl font-medium leading-none tracking-tight md:text-4xl">{item.company}</h3>
                 <p className="mt-3 font-mono text-xs uppercase tracking-[0.14em] text-accent">{item.role}</p>
               </div>
               <div className="col-span-12 md:col-span-8">
