@@ -1,7 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { Section, SectionHeading } from "./Section";
 import { FadeIn } from "./motion";
-import { YouTubeFacade } from "./YouTubeFacade";
+import { VideoStage } from "./VideoStage";
 import type { Content } from "@/lib/content";
 
 export function FeaturedProject({ t }: { t: Content["featured"] }) {
@@ -11,7 +11,7 @@ export function FeaturedProject({ t }: { t: Content["featured"] }) {
 
       <div className="grid grid-cols-12 gap-x-6 gap-y-10">
         <div className="col-span-12 lg:col-span-8">
-          {t.youtubeId ? <YouTubeFacade id={t.youtubeId} title={t.title} /> : null}
+          <VideoStage src={t.video} poster={t.poster} title={t.title} playLabel={t.play} />
         </div>
 
         <div className="col-span-12 lg:col-span-4">

@@ -22,7 +22,7 @@ const socials = {
 
 const tafvoxMedia = {
   url: "https://tafvox.com",
-  youtubeId: "ky2DTp0CErY",
+  demo: "tafvox",
 };
 
 const flows = (lang: Lang) => ({
@@ -475,7 +475,9 @@ export function getContent(lang: Lang) {
     featured: {
       ...d.featured,
       url: tafvoxMedia.url,
-      youtubeId: tafvoxMedia.youtubeId,
+      video: `/videos/${tafvoxMedia.demo}-demo${lang === "es" ? "-es" : ""}.mp4`,
+      poster: `/videos/${tafvoxMedia.demo}-poster${lang === "es" ? "-es" : ""}.jpg`,
+      play: lang === "es" ? "Ver video" : "Watch video",
     },
     approach: d.approach,
     experience: {
