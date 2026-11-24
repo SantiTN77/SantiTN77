@@ -10,8 +10,8 @@ export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
   const links = [
     { href: "#gcp", label: t.gcp },
     { href: "#work", label: t.work },
+    { href: "#approach", label: t.approach },
     { href: "#experience", label: t.experience },
-    { href: "#automations", label: t.automations },
     { href: "#stack", label: t.stack },
   ];
 
@@ -30,11 +30,11 @@ export function Navbar({ lang, t }: { lang: Lang; t: Content["nav"] }) {
   });
 
   useEffect(() => {
-    const ids = ["gcp", "work", "projects", "experience", "automations", "stack"];
+    const ids = ["gcp", "work", "approach", "experience", "automations", "stack"];
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) setActive(`#${e.target.id === "projects" ? "work" : e.target.id}`);
+          if (e.isIntersecting) setActive(`#${e.target.id === "automations" ? "experience" : e.target.id}`);
         });
       },
       { rootMargin: "-45% 0px -50% 0px" },

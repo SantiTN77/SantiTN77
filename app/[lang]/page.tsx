@@ -3,7 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { GcpArchitecture } from "@/components/GcpArchitecture";
 import { FeaturedProject } from "@/components/FeaturedProject";
-import { Projects } from "@/components/Projects";
+import { Approach } from "@/components/Approach";
 import { Experience } from "@/components/Experience";
 import { Automations } from "@/components/Automations";
 import { TechStack } from "@/components/TechStack";
@@ -28,7 +28,7 @@ export default async function Home({
         <Hero t={c.hero} />
         <GcpArchitecture t={c.gcp} />
         <FeaturedProject t={c.featured} />
-        <Projects t={c.projects} />
+        <Approach t={c.approach} />
         <Experience t={c.experience} />
         <Automations t={c.automations} viewLabel={safe === "es" ? "Ver arquitectura" : "View architecture"} />
         <TechStack t={c.techStack} />

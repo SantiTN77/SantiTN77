@@ -44,10 +44,8 @@ const deploymentNames = [
 ];
 
 const experienceTags = [
-  "n8n",
-  "Python Microservices",
-  "Conversational AI",
-  "RAG Pipelines",
+  ["Google ADK", "Vertex AI · Gemini Live", "Multimodal RAG", "Cloud Run", "Multi-tenant RLS"],
+  ["n8n", "Python microservices", "Conversational AI", "RAG pipelines"],
 ];
 
 const ragStack = [
@@ -68,51 +66,23 @@ const logsStack = [
   "Slack / Telegram",
 ];
 
-const ghostWriter = {
-  url: "https://agent-ghost-writer.vercel.app/dashboard",
-  stack: [
-    "Model Context Protocol (MCP)",
-    "Qdrant Hybrid Search (RRF)",
-    "Gemini Embeddings",
-    "n8n",
-    "Next.js",
-    "Supabase",
-  ],
-  pageUrls: [
-    "https://agent-ghost-writer.vercel.app/dashboard",
-    "https://agent-ghost-writer.vercel.app/inspector",
-    "https://agent-ghost-writer.vercel.app/flow",
-  ],
-};
-
-const orionAi = {
-  url: "https://orion-ai-jade.vercel.app",
-  githubUrl: "https://github.com/SantiTN77/orion-ai",
-  stack: ["Next.js", "Edge Functions", "FastAPI", "OpenRouter", "TypeScript"],
-};
-
-const projectsData = [ghostWriter, orionAi];
-
 const gcpProjectsData = [
   {
     url: "https://enterprise-adk-a2a-mcp.vercel.app",
     repo: "https://github.com/SantiTN77/enterprise-adk-a2a-mcp",
-    video: "/videos/adk-demo.mp4",
-    poster: "/videos/adk-poster.jpg",
+    demo: "adk",
     stack: ["Google ADK", "A2A", "MCP", "Vertex AI Gemini", "Cloud Run", "Secret Manager", "Terraform", "Next.js BFF"],
   },
   {
     url: "https://hybrid-rag-llmops-gcp-web.vercel.app",
     repo: "https://github.com/SantiTN77/hybrid-rag-llmops-gcp",
-    video: "/videos/rag-demo.mp4",
-    poster: "/videos/rag-poster.jpg",
+    demo: "rag",
     stack: ["Firestore Vector Search", "BM25 + RRF", "Vertex AI Gemini", "Cloud Run Jobs", "Cloud Workflows", "LLMOps Gate", "Terraform"],
   },
   {
     url: "https://gcp-ai-reference-architectures.vercel.app",
     repo: "https://github.com/SantiTN77/gcp-ai-reference-architectures",
-    video: "/videos/arch-demo.mp4",
-    poster: "/videos/arch-poster.jpg",
+    demo: "arch",
     stack: ["Reference Architectures", "ADRs", "FinOps", "STRIDE", "OWASP LLM Top 10", "VPC-SC", "Cloud DLP"],
   },
 ];
@@ -162,9 +132,9 @@ const dict = {
     nav: {
       gcp: "GCP AI",
       work: "Work",
-      projects: "Projects",
       experience: "Experience",
       automations: "Automations",
+      approach: "Approach",
       stack: "Stack",
       contact: "Contact",
     },
@@ -238,40 +208,26 @@ const dict = {
         "Real-time version conflict detection",
       ],
     },
-    projects: {
-      sectionTitle: "Side Projects",
-      sectionSubtitle: "Independent builds, shipped end-to-end outside client work.",
-      liveBadge: "Live",
-      codeCta: "View code",
+    approach: {
+      sectionTitle: "How I build AI systems",
+      sectionSubtitle: "Four rules that every project on this page follows.",
       items: [
-        {
-          title: "Agentic Ghost-Writer — Evolving Code Memory",
-          badge: "Hackathon build",
-          description:
-            "An MCP (Model Context Protocol) server that gives coding agents long-term memory. It intercepts a live runtime error from an AI agent, embeds it, and runs a hybrid dense + sparse search (RRF-fused) over a Qdrant collection of 50+ past success contexts — auto-correcting the agent's next step before a human ever sees the failure. Orchestrated with n8n, embedded with Gemini, logged to Supabase in real time, and visualized in a live observability dashboard with a one-click error-recovery demo.",
-          cta: "Open live dashboard",
-          pagesLabel: "Explore the system",
-          pages: [
-            { name: "Health Dashboard" },
-            { name: "Context Inspector" },
-            { name: "Interception Flow" },
-          ],
-        },
-        {
-          title: "Orion AI — Voice Agent",
-          badge: null as string | null,
-          description:
-            "A proof-of-concept AI customer support voice agent for an internet service provider, built on the Next.js Edge runtime. It talks customers through common connectivity issues over voice, with LLM reasoning handled through OpenRouter for low-latency, single-deploy inference without a separate backend service.",
-          cta: "Visit live demo",
-          pagesLabel: null as string | null,
-          pages: [] as { name: string }[],
-        },
+        { k: "Architecture first", d: "Diagrams, threat models, cost models and ADRs before code — so every trade-off is explicit and reversible." },
+        { k: "Private by default", d: "No public model endpoints. OIDC between services, least-privilege IAM, secrets in Secret Manager, DLP before inference." },
+        { k: "Cost is a requirement", d: "Scale-to-zero infrastructure, Flash vs Pro routing and per-request token accounting — budgets are designed, not discovered." },
+        { k: "Evaluated, not guessed", d: "Golden datasets and quality gates for hallucination, precision and abstention. A release that fails the gate does not ship." },
       ],
     },
     experience: {
-      sectionTitle: "Enterprise Experience & Automations",
+      sectionTitle: "Experience",
       sectionSubtitle: "Core engineering outcomes shipped to production.",
       items: [
+        {
+          company: "Tafvox",
+          role: "Founder · AI Solutions Architect",
+          description:
+            "Designing and shipping a multi-agent AI copilot for construction teams on Google Cloud: Google ADK agents on Vertex AI, a real-time voice agent on the Gemini Live API, multimodal RAG over blueprints and site documents, human-in-the-loop approvals and per-organization isolation with an auditable trail.",
+        },
         {
           company: "MetaBiblioteca",
           role: "AI Agent Engineer",
@@ -334,9 +290,9 @@ const dict = {
     nav: {
       gcp: "GCP IA",
       work: "Proyecto",
-      projects: "Proyectos",
       experience: "Experiencia",
       automations: "Automatizaciones",
+      approach: "Enfoque",
       stack: "Stack",
       contact: "Contacto",
     },
@@ -411,40 +367,26 @@ const dict = {
         "Detección de conflictos de versión en tiempo real",
       ],
     },
-    projects: {
-      sectionTitle: "Proyectos Personales",
-      sectionSubtitle: "Builds independientes, llevados de cero a producción fuera del trabajo con clientes.",
-      liveBadge: "En vivo",
-      codeCta: "Ver código",
+    approach: {
+      sectionTitle: "Cómo construyo sistemas de IA",
+      sectionSubtitle: "Cuatro reglas que siguen todos los proyectos de esta página.",
       items: [
-        {
-          title: "Agentic Ghost-Writer — Memoria Evolutiva de Código",
-          badge: "Proyecto de hackathon",
-          description:
-            "Un servidor MCP (Model Context Protocol) que le da memoria de largo plazo a agentes de codificación. Intercepta en tiempo real el error que lanza un agente de IA, lo embebe y ejecuta una búsqueda híbrida densa + dispersa (fusionada con RRF) sobre una colección Qdrant con más de 50 contextos de éxito previos — auto-corrigiendo el siguiente paso del agente antes de que un humano vea el error. Orquestado con n8n, embebido con Gemini, registrado en tiempo real en Supabase y visualizado en un dashboard de observabilidad en vivo con una demo de recuperación de errores con un solo clic.",
-          cta: "Ver dashboard en vivo",
-          pagesLabel: "Explorar el sistema",
-          pages: [
-            { name: "Dashboard de Salud" },
-            { name: "Inspector de Contexto" },
-            { name: "Flujo de Intercepción" },
-          ],
-        },
-        {
-          title: "Orion AI — Agente de Voz",
-          badge: null as string | null,
-          description:
-            "Una prueba de concepto de agente de voz de atención al cliente para un proveedor de internet, construida sobre el runtime Edge de Next.js. Guía al usuario por voz para resolver problemas comunes de conectividad, con el razonamiento del LLM a través de OpenRouter para una inferencia de baja latencia en un único despliegue, sin backend separado.",
-          cta: "Ver demo en vivo",
-          pagesLabel: null as string | null,
-          pages: [] as { name: string }[],
-        },
+        { k: "Arquitectura primero", d: "Diagramas, modelos de amenazas, modelos de costo y ADRs antes del código: cada trade-off queda explícito y es reversible." },
+        { k: "Privado por defecto", d: "Sin endpoints de modelos públicos. OIDC entre servicios, IAM de mínimo privilegio, secretos en Secret Manager y DLP antes de la inferencia." },
+        { k: "El costo es un requisito", d: "Infraestructura que escala a cero, enrutamiento Flash vs Pro y costo de tokens por petición: el presupuesto se diseña, no se descubre." },
+        { k: "Evaluado, no supuesto", d: "Golden datasets y quality gates de alucinación, precisión y abstención. Un release que no pasa el gate no se despliega." },
       ],
     },
     experience: {
-      sectionTitle: "Experiencia Empresarial & Automatizaciones",
+      sectionTitle: "Experiencia",
       sectionSubtitle: "Resultados de ingeniería llevados a producción.",
       items: [
+        {
+          company: "Tafvox",
+          role: "Founder · AI Solutions Architect",
+          description:
+            "Diseño y despliego un copiloto de IA multiagente para equipos de construcción sobre Google Cloud: agentes con Google ADK en Vertex AI, un agente de voz en tiempo real con la Gemini Live API, RAG multimodal sobre planos y documentos de obra, aprobación humana y aislamiento por organización con trazabilidad auditable.",
+        },
         {
           company: "MetaBiblioteca",
           role: "AI Agent Engineer",
@@ -508,26 +450,19 @@ export function getContent(lang: Lang) {
     lang,
     meta: d.meta,
     nav: { ...d.nav, githubUrl: socials.github },
-    projects: {
-      sectionTitle: d.projects.sectionTitle,
-      sectionSubtitle: d.projects.sectionSubtitle,
-      liveBadge: d.projects.liveBadge,
-      codeCta: d.projects.codeCta,
-      items: d.projects.items.map((item, i) => {
-        const data = projectsData[i];
-        const pageUrls = "pageUrls" in data ? data.pageUrls : [];
-        return {
-          ...item,
-          url: data.url,
-          stack: data.stack,
-          githubUrl: "githubUrl" in data ? data.githubUrl : null,
-          pages: item.pages.map((p, j) => ({ ...p, url: pageUrls[j] })),
-        };
-      }),
-    },
     gcp: {
       ...d.gcp,
-      items: d.gcp.items.map((item, i) => ({ ...item, ...gcpProjectsData[i] })),
+      items: d.gcp.items.map((item, i) => {
+        const data = gcpProjectsData[i];
+        const suffix = lang === "es" ? "-es" : "";
+        return {
+          ...item,
+          ...data,
+          url: `${data.url}${lang === "es" ? "?lang=es" : ""}`,
+          video: `/videos/${data.demo}-demo${suffix}.mp4`,
+          poster: `/videos/${data.demo}-poster${suffix}.jpg`,
+        };
+      }),
     },
     hero: {
       ...d.hero,
@@ -542,12 +477,13 @@ export function getContent(lang: Lang) {
       url: tafvoxMedia.url,
       youtubeId: tafvoxMedia.youtubeId,
     },
+    approach: d.approach,
     experience: {
       sectionTitle: d.experience.sectionTitle,
       sectionSubtitle: d.experience.sectionSubtitle,
-      items: d.experience.items.map((item) => ({
+      items: d.experience.items.map((item, i) => ({
         ...item,
-        tags: experienceTags,
+        tags: experienceTags[i] ?? [],
       })),
     },
     automations: {

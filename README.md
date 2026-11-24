@@ -2,38 +2,91 @@
 
 <p align="center">
 <b>AI Agent Engineer · AI Solutions Architect (GCP)</b><br/>
-Diseño y despliego sistemas multiagente, RAG y voz en tiempo real sobre Google Cloud: de la arquitectura a producción.
+Diseño, despliego y aseguro sistemas agénticos en Google Cloud: multiagente con ADK, A2A y MCP, RAG con quality gates de LLMOps y arquitectura serverless privada.
 </p>
 
 <p align="center">
-<a href="https://tafvox.com"><img src="https://img.shields.io/badge/Tafvox-Live-A78BFA?style=for-the-badge" alt="Tafvox" /></a>
-<a href="https://www.linkedin.com/in/danielsantiagotafur/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://danieltafur.vercel.app/es"><img src="https://img.shields.io/badge/Portafolio-danieltafur.vercel.app-D4471C?style=for-the-badge" alt="Portafolio" /></a>
+<a href="https://www.linkedin.com/in/danielsantiagotafur/"><img src="https://img.shields.io/badge/LinkedIn-151412?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://tafvox.com"><img src="https://img.shields.io/badge/Tafvox-Live-151412?style=for-the-badge" alt="Tafvox" /></a>
 </p>
 
 ---
 
 ## Sobre mí
 
-AI Agent Engineer enfocado en llevar sistemas agénticos a producción: orquestación multiagente, RAG sobre bases vectoriales, voz de baja latencia y despliegue serverless en Google Cloud. Priorizo confiabilidad, trazabilidad y costos controlados, no solo demos.
+AI Agent Engineer enfocado en llevar sistemas agénticos a producción en Google Cloud. Cuatro reglas guían cada proyecto:
 
-- **Arquitectura multiagente**: agentes especializados con Google ADK, herramientas (MCP) y flujos con supervisión humana.
-- **RAG de nivel producción**: embeddings en Vertex AI, búsqueda vectorial en Qdrant, aislamiento por organización y validación de respuestas.
-- **Voz en tiempo real**: agentes conversacionales con Gemini Live y baja latencia.
-- **Cloud e infraestructura**: Cloud Run, contenedores e Infraestructura como Código con Terraform.
+- **Arquitectura primero**: diagramas, modelos de amenazas, modelos de costo y ADRs antes del código.
+- **Privado por defecto**: sin endpoints de modelos públicos; OIDC entre servicios, IAM de mínimo privilegio y DLP antes de la inferencia.
+- **El costo es un requisito**: infraestructura que escala a cero, enrutamiento Gemini Flash vs Pro y costo de tokens por petición.
+- **Evaluado, no supuesto**: golden datasets y quality gates de alucinación, precisión y abstención.
 
-## Proyecto destacado: Tafvox
+## Arquitectura de IA en GCP — proyectos en producción
 
-**[Tafvox.com](https://tafvox.com): copiloto de IA multimodal para AEC (Arquitectura, Ingeniería y Construcción).**
-Plataforma de control documental con agente de voz, RAG sobre el expediente del proyecto, análisis de planos con visión por computador y detección de conflictos de versión.
+Código abierto, desplegado y con demo narrada en **español e inglés**. Cada app tiene selector de idioma EN / ES.
 
-- Arquitectura multiagente con **Google ADK** sobre **Vertex AI** (Gemini).
-- Memoria vectorial por organización con **Qdrant** y embeddings de Vertex AI.
-- Backend desplegado en **Cloud Run**; datos y autenticación en Supabase.
-- Cola offline, avisos de uso de IA y registro de validación de resultados.
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://danieltafur.vercel.app/es#gcp"><img src="https://raw.githubusercontent.com/SantiTN77/enterprise-adk-a2a-mcp/main/docs/media/demo-poster.jpg" alt="Demo del sistema multiagente" /></a>
+</td>
+<td valign="top">
 
-## Automatizaciones IA en producción
+### Sistema multiagente de riesgo y cumplimiento
+Orquestador con **Google ADK** que delega vía **A2A** a agentes especialistas, cada uno con sus herramientas **MCP**, sobre **Cloud Run privado**.
 
-En MetaBiblioteca construí asistentes conversacionales RAG (embeddings, chunking, base vectorial y orquestación de LLMs) con n8n y microservicios en Python, desplegados y verificables públicamente. El asistente aparece abajo a la derecha en cada sitio:
+- Delegación A2A en paralelo con verificación OIDC por agente
+- Servidores MCP sobre Cloud Storage, Secret Manager y Vertex AI
+- Cero endpoints públicos, escala a cero y BFF con rate limiting
+
+[App en vivo](https://enterprise-adk-a2a-mcp.vercel.app/?lang=es) · [Código](https://github.com/SantiTN77/enterprise-adk-a2a-mcp) · [Demo ES](https://github.com/SantiTN77/enterprise-adk-a2a-mcp/releases/download/v1.1.0/adk-demo-es.mp4) · [Demo EN](https://github.com/SantiTN77/enterprise-adk-a2a-mcp/releases/download/v1.1.0/adk-demo.mp4)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://danieltafur.vercel.app/es#gcp"><img src="https://raw.githubusercontent.com/SantiTN77/hybrid-rag-llmops-gcp/main/docs/media/demo-poster.jpg" alt="Demo del RAG híbrido" /></a>
+</td>
+<td valign="top">
+
+### RAG híbrido con quality gate de LLMOps
+**Firestore Vector Search + BM25** fusionadas con **RRF** y respuestas de **Gemini** con citas a nivel de fragmento.
+
+- Golden dataset que bloquea despliegues por alucinación, precisión y recall
+- Telemetría de latencia y costo de tokens por consulta
+- Ingesta como Cloud Run job orquestado con Cloud Workflows
+
+[App en vivo](https://hybrid-rag-llmops-gcp-web.vercel.app/?lang=es) · [Código](https://github.com/SantiTN77/hybrid-rag-llmops-gcp) · [Demo ES](https://github.com/SantiTN77/hybrid-rag-llmops-gcp/releases/download/v1.1.0/rag-demo-es.mp4) · [Demo EN](https://github.com/SantiTN77/hybrid-rag-llmops-gcp/releases/download/v1.1.0/rag-demo.mp4)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://danieltafur.vercel.app/es#gcp"><img src="https://raw.githubusercontent.com/SantiTN77/gcp-ai-reference-architectures/main/docs/media/demo-poster.jpg" alt="Demo de las arquitecturas de referencia" /></a>
+</td>
+<td valign="top">
+
+### Arquitecturas de referencia GCP + IA y ADRs
+Lo que un arquitecto entrega antes del código: **diagramas**, **modelos de costo**, **modelos de amenazas** y **registros de decisión**.
+
+- Modelos FinOps en tres niveles y calculadora de costos interactiva
+- STRIDE mapeado al OWASP Top 10 para LLMs, con VPC-SC y Cloud DLP
+- ADRs cuantitativos: Cloud Run vs GKE, Flash vs Pro, MCP / A2A
+
+[Portal](https://gcp-ai-reference-architectures.vercel.app/?lang=es) · [Código](https://github.com/SantiTN77/gcp-ai-reference-architectures) · [Demo ES](https://github.com/SantiTN77/gcp-ai-reference-architectures/releases/download/v1.1.0/arch-demo-es.mp4) · [Demo EN](https://github.com/SantiTN77/gcp-ai-reference-architectures/releases/download/v1.1.0/arch-demo.mp4)
+
+</td>
+</tr>
+</table>
+
+## Tafvox — fundador
+
+**[Tafvox.com](https://tafvox.com)**: copiloto de IA multiagente para equipos de construcción. Agentes con **Google ADK** en **Vertex AI**, agente de voz en tiempo real con la **Gemini Live API**, RAG multimodal sobre planos y documentos de obra, aprobación humana y aislamiento por organización con trazabilidad auditable.
+
+## Automatizaciones IA en producción — MetaBiblioteca
+
+Asistentes conversacionales RAG (embeddings, chunking, base vectorial y orquestación de LLMs) con n8n y microservicios en Python, desplegados y verificables públicamente. El asistente aparece abajo a la derecha en cada sitio:
 
 - [coruniamericana.metacatalogo.org](https://coruniamericana.metacatalogo.org/)
 - [biblioteca.ecci.edu.co](https://biblioteca.ecci.edu.co/)
@@ -45,43 +98,37 @@ Por confidencialidad no comparto los flujos internos ni datos corporativos.
 
 **Agentes & IA**
 
-![Google ADK](https://img.shields.io/badge/Google_ADK-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Vertex AI](https://img.shields.io/badge/Vertex_AI-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![MCP](https://img.shields.io/badge/Model_Context_Protocol-000000?style=for-the-badge&logo=anthropic&logoColor=white)
-![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge&logo=qdrant&logoColor=white)
+![Google ADK](https://img.shields.io/badge/Google_ADK-151412?style=flat-square&logo=google&logoColor=white)
+![Vertex AI](https://img.shields.io/badge/Vertex_AI-151412?style=flat-square&logo=googlecloud&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-151412?style=flat-square&logo=googlegemini&logoColor=white)
+![A2A](https://img.shields.io/badge/A2A_Protocol-151412?style=flat-square)
+![MCP](https://img.shields.io/badge/Model_Context_Protocol-151412?style=flat-square&logo=anthropic&logoColor=white)
+![RAG](https://img.shields.io/badge/Hybrid_RAG-151412?style=flat-square)
+![LLMOps](https://img.shields.io/badge/LLMOps-151412?style=flat-square)
+![Qdrant](https://img.shields.io/badge/Qdrant-151412?style=flat-square&logo=qdrant&logoColor=white)
 
-**Cloud & Infra**
+**Google Cloud & Infra**
 
-![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Cloud Run](https://img.shields.io/badge/Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=for-the-badge&logo=terraform&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Cloud Run](https://img.shields.io/badge/Cloud_Run-D4471C?style=flat-square&logo=googlecloud&logoColor=white)
+![Firestore](https://img.shields.io/badge/Firestore_Vector_Search-D4471C?style=flat-square&logo=firebase&logoColor=white)
+![Cloud Workflows](https://img.shields.io/badge/Cloud_Workflows-D4471C?style=flat-square&logo=googlecloud&logoColor=white)
+![Secret Manager](https://img.shields.io/badge/Secret_Manager-D4471C?style=flat-square&logo=googlecloud&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-D4471C?style=flat-square&logo=terraform&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-D4471C?style=flat-square&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-D4471C?style=flat-square&logo=vercel&logoColor=white)
 
 **Lenguajes & Frameworks**
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
-
-## GitHub Stats
-
-<p align="center">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=SantiTN77&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true&title_color=A78BFA&icon_color=A78BFA&text_color=FAFAFA&bg_color=09090B" alt="GitHub Stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SantiTN77&layout=compact&theme=dark&hide_border=true&title_color=A78BFA&text_color=FAFAFA&bg_color=09090B" alt="Top Langs" />
-</p>
+![Python](https://img.shields.io/badge/Python-151412?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-151412?style=flat-square&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-151412?style=flat-square&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-151412?style=flat-square&logo=nextdotjs&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-151412?style=flat-square&logo=n8n&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-151412?style=flat-square&logo=playwright&logoColor=white)
 
 ## Contacto
 
 <p align="center">
-<a href="https://www.linkedin.com/in/danielsantiagotafur/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="https://tafvox.com"><img src="https://img.shields.io/badge/Tafvox-A78BFA?style=for-the-badge" alt="Tafvox" /></a>
+<a href="https://danieltafur.vercel.app/es"><img src="https://img.shields.io/badge/Portafolio-D4471C?style=for-the-badge" alt="Portafolio" /></a>
+<a href="https://www.linkedin.com/in/danielsantiagotafur/"><img src="https://img.shields.io/badge/LinkedIn-151412?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
-
-<p align="center"><sub>Código con propósito: resiliente, seguro y eficiente.</sub></p>
